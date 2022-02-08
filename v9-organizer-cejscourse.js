@@ -158,9 +158,9 @@
      let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
      let closeBodyWrapper = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-     let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul><br>';
+     let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
 
-     let imageString2 = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    //  let imageString2 = '<span class="imageString hidden visually-hidden">No Image Provided</span>';
      let openFig = '<figure class="figure hidden visually-hidden">';
      let closeFig = '</figure>';
 
@@ -257,8 +257,6 @@
 
         for (let i = 0; i < arrlength; i++) {
             let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
-
-
             let mediaInfo = getMediaInfo(iconArray[i]);
             let media = readMedia(iconArray[i]);
             let info = new ImageInfo;
