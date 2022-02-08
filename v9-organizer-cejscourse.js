@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.9.8
+     *     @version 7.9.9
      */
 
 
@@ -141,6 +141,8 @@
      let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
      let closeBodyWrapper = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+
+     let imageString2 = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
      let openFig = '<figure class="figure hidden visually-hidden">';
      let closeFig = '</figure>';
 
@@ -234,8 +236,8 @@
         pathArray.length = arrlength;
 
         for (let i = 0; i < arrlength; i++) {
-            let mediaTag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
-            let mediaPath = BrokerUtils.processT4Tags (dbStatement, publishCache, section, galleryContent, language, isPreview, tag);
+            let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
+            // let mediaPath = BrokerUtils.processT4Tags (dbStatement, publishCache, section, galleryContent, language, isPreview, tag);
             pathArray[i] = mediaPath;
         }
 
@@ -249,13 +251,13 @@
 
 
 
-        imageString =   (info.check())
+        imageString2 =   (info.check())
                         ? '<img src="' + pathArray[0] + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
                         : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
     
-        openFig = '<figure class="figure">';
-        openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
-        openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
+        // openFig = '<figure class="figure">';
+        // openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
+        // openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
 
     } 
 
@@ -292,6 +294,7 @@ var mediaDescription =
              titleLink,
              subjecString,
              primaryNameString,
+             imageString2,
              iconString,
              cejscDict.hardMedia.content,
              closeBodyWrapper,
