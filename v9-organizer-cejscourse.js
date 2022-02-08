@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.11
+     *     @version 7.12
      */
 
 
@@ -250,24 +250,22 @@
 
         let iconArray = cejscDict.icons.content.split(',');
         let arrlength = iconArray.length;
-        let pathArray = [];
+        // let pathArray = [];
         let imgStringArr = [];
-        pathArray.length = arrlength;
+        // pathArray.length = arrlength;
         imgStringArr.length = arrlength;
 
         for (let i = 0; i < arrlength; i++) {
             let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
-            pathArray[i] = mediaPath;
-        }
 
-        for (let j = 0; j < arrlength; j++) {
-            let mediaInfo = getMediaInfo(iconArray[j]);
-            let media = readMedia(iconArray[j]);
+
+            let mediaInfo = getMediaInfo(iconArray[i]);
+            let media = readMedia(iconArray[i]);
             let info = new ImageInfo;
             info.setInput(media);
 
-            imgStringArr[j] =   (info.check())
-                                ? '<img src="' + pathArray[j] + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+            imgStringArr[i] =   (info.check())
+                                ? '<img src="' + mediaPath + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
                                 : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
         }
 
