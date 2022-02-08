@@ -76,6 +76,23 @@
      
          return oMediaStream;
      }
+
+
+
+     /***
+     *      Returns an array of list items
+     */
+    function assignList(arrayOfValues) {
+
+        let listValues = '';
+
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
+        }
+
+        return listValues;
+    }
      
      
      
@@ -252,6 +269,8 @@
                                 ? '<img src="' + pathArray[j] + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
                                 : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
         }
+
+        let iconValues = assignList(imgStringArr);
 
 
         // let imageId = content.get('Image').getID();
