@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.10
+     *     @version 7.11
      */
 
 
@@ -251,7 +251,7 @@
         let iconArray = cejscDict.icons.content.split(',');
         let arrlength = iconArray.length;
         let pathArray = [];
-        let imgStringArr = []
+        let imgStringArr = [];
         pathArray.length = arrlength;
         imgStringArr.length = arrlength;
 
@@ -262,7 +262,7 @@
 
         for (let j = 0; j < arrlength; j++) {
             let mediaInfo = getMediaInfo(iconArray[j]);
-            let media = readMedia(imageId);
+            let media = readMedia(iconArray[j]);
             let info = new ImageInfo;
             info.setInput(media);
 
@@ -273,7 +273,7 @@
 
         let iconValues = assignList(imgStringArr);
 
-        listOfIcons = '<ul class="list-group list-group-horizontal">' + iconValues + '</ul><br>';
+        listOfIcons = '<ul class="list-group list-group-horizontal">' + iconValues + '</ul>';
 
     } 
 
