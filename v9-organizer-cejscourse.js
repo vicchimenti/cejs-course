@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.9.7
+     *     @version 7.9.8
      */
 
 
@@ -114,6 +114,7 @@
          icons: getContentValues('<t4 type="content" name="Icon ID" output="normal" modifiers="striptags,htmlentities" />'),
          primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
          subjectDescription: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
+         hardMedia:getContentValues('<t4 type="media" formatter="path/*" id="3694397" />'),
 
          courseDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="medialibrary,nav_sections,htmlentities" />'),
          fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
@@ -292,6 +293,7 @@
              subjecString,
              primaryNameString,
              iconString,
+             cejscDict.hardMedia.content,
              closeBodyWrapper,
              closeRow,
              endingHTML
