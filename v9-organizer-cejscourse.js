@@ -233,27 +233,32 @@
         let iconArray = cejscDict.icons.content.split(',');
         let arrlength = iconArray.length;
         let pathArray = [];
+        let imgStringArr = []
         pathArray.length = arrlength;
+        imgStringArr.length = arrlength;
 
         for (let i = 0; i < arrlength; i++) {
             let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
-            // let mediaPath = BrokerUtils.processT4Tags (dbStatement, publishCache, section, galleryContent, language, isPreview, tag);
             pathArray[i] = mediaPath;
         }
 
-        let imageId = iconArray[0];
+        for (let j = 0; j < arrlength; j++) {
+            let mediaInfo = getMediaInfo(iconArray[j]);
+            let media = readMedia(imageId);
+            let info = new ImageInfo;
+            info.setInput(media);
+
+            imgStringArr[j] =   (info.check())
+                                ? '<img src="' + pathArray[j] + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                                : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
+        }
+
 
         // let imageId = content.get('Image').getID();
-        let mediaInfo = getMediaInfo(imageId);
-        let media = readMedia(imageId);
-        let info = new ImageInfo;
-        info.setInput(media);
 
 
 
-        imageString2 =   (info.check())
-                        ? '<img src="' + pathArray[0] + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                        : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
+
     
         // openFig = '<figure class="figure">';
         // openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
