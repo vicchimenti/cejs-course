@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.14
+     *     @version 7.15
      */
 
 
@@ -83,15 +83,16 @@
     /***
       *      Returns a formatted html img tag
       */
-     function mediaTag(itemPath, itemId) {
+     function mediaTag(itemId) {
 
+        let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
         let mediaInfo = getMediaInfo(itemId);
         let media = readMedia(itemId);
         let info = new ImageInfo;
         info.setInput(media);
 
         let mediaHTML = (info.check())
-                        ? '<img src="' + itemPath + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        ? '<img src="' + mediaPath + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
                         : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
 
         return mediaHTML;
@@ -269,12 +270,11 @@
         let iconArray = cejscDict.icons.content.split(',');
         let arrlength = iconArray.length;
         let imgStringArr = [];
-        imgStringArr.length = arrlength;
 
         for (let i = 0; i < arrlength; i++) {
 
-            let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
-            imgStringArr[i] = mediaTag(mediaPath, iconArray[i]);
+            // let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />');
+            imgStringArr[i] = mediaTag(iconArray[i]);
         }
 
         let iconValues = assignList(imgStringArr);
