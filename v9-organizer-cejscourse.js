@@ -109,7 +109,7 @@
 
         for (let i = 0; i < arrayOfValues.length; i++) {
 
-            listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
+            listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i] + '</li>';
         }
 
         return listValues;
@@ -271,7 +271,7 @@
         let arrlength = iconArray.length;
         let imgStringArr = [];
 
-        for (let i = 0; i < arrlength; i++) {
+        for (let i = 0; i < arrlength; ++i) {
 
             // let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />');
             imgStringArr[i] = mediaTag(iconArray[i]);
