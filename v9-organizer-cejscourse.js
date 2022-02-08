@@ -111,7 +111,7 @@
          contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
          articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
          articleImage: getContentValues('<t4 type="content" name="Image" output="normal" formatter="path/*" />'),
-         iconId: getContentValues('<t4 type="content" name="Icon ID" output="normal" modifiers="striptags,htmlentities" />'),
+         icons: getContentValues('<t4 type="content" name="Icon ID" output="normal" modifiers="striptags,htmlentities" />'),
          primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
          subjectDescription: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
 
@@ -189,9 +189,9 @@
       *  check for icon id
       * 
       * */
-      let iconString =   (cejscDict.iconId.content)
-                        ? '<p class="card-text iconId"><strong>Media Library Image ID: </strong>' + cejscDict.iconId.content + '</p>'
-                        : '<p class="card-text iconId visually-hidden hidden">No valid icon provided</p>';
+      let iconString =   (cejscDict.icons.content)
+                        ? '<p class="card-text icons"><strong>Media Library Image ID: </strong>' + cejscDict.icons.content + '</p>'
+                        : '<p class="card-text icons visually-hidden hidden">No valid icon provided</p>';
  
  
  
@@ -216,7 +216,36 @@
          openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
          openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
 
-     } 
+     }
+
+
+
+
+    /***
+      *  Parse for icons
+      * 
+      * */
+    if (cejscDict.icons.content) {
+
+        let iconArray = cejscDict.icons.content.split(',');
+
+        let imageId = content.get('Image').getID();
+        let mediaInfo = getMediaInfo(imageId);
+        let media = readMedia(imageId);
+        let info = new ImageInfo;
+        info.setInput(media);
+
+        let imagePath = '<t4 type='media' formatter='path/*' id="' + imageId + '" />`;
+
+        imageString =   (info.check())
+                        ? '<img src="<t4 type='media' formatter='path/*' id='number' />" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
+    
+        openFig = '<figure class="figure">';
+        openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
+        openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
+
+    } 
 
 
      let imagePath = T4Utils.brokerUtils.generateT4Tag({
