@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.9.5
+     *     @version 7.9.6
      */
 
 
@@ -200,23 +200,23 @@
       *  Parse for image
       * 
       * */
-     if (cejscDict.articleImage.content) {
+    //  if (cejscDict.articleImage.content) {
  
-         let imageId = content.get('Image').getID();
-         let mediaInfo = getMediaInfo(imageId);
-         let media = readMedia(imageId);
-         let info = new ImageInfo;
-         info.setInput(media);
+    //      let imageId = content.get('Image').getID();
+    //      let mediaInfo = getMediaInfo(imageId);
+    //      let media = readMedia(imageId);
+    //      let info = new ImageInfo;
+    //      info.setInput(media);
  
-         imageString =   (info.check())
-                         ? '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                         : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
+    //      imageString =   (info.check())
+    //                      ? '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+    //                      : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
    
-         openFig = '<figure class="figure">';
-         openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
-         openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
+    //      openFig = '<figure class="figure">';
+    //      openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
+    //      openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
 
-     }
+    //  }
 
 
 
@@ -228,17 +228,28 @@
     if (cejscDict.icons.content) {
 
         let iconArray = cejscDict.icons.content.split(',');
+        let len = iconArray.length;
+        let pathArray = [];
+        pathArray.length = len;
 
-        let imageId = content.get('Image').getID();
+        for (let i = 0; i < len; i++) {
+            let tag = '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />';
+            let mediaPath = BrokerUtils.processT4Tags (dbStatement, publishCache, section, galleryContent, language, isPreview, tag);
+            pathArray[i] = mediaPath;
+        }
+
+        let imageId = iconArray[0];
+
+        // let imageId = content.get('Image').getID();
         let mediaInfo = getMediaInfo(imageId);
         let media = readMedia(imageId);
         let info = new ImageInfo;
         info.setInput(media);
 
-        let imagePath = '<t4 type='media' formatter='path/*' id="' + imageId + '" />`;
+
 
         imageString =   (info.check())
-                        ? '<img src="<t4 type='media' formatter='path/*' id='number' />" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        ? '<img src="' + pathArray[0] + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
                         : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
     
         openFig = '<figure class="figure">';
@@ -248,12 +259,18 @@
     } 
 
 
-     let imagePath = T4Utils.brokerUtils.generateT4Tag({
-        type: 'media',
-        id: imageId,
-        formatter: 'path/*'
-    });
+    //  let imagePath = T4Utils.brokerUtils.generateT4Tag({
+    //     type: 'media',
+    //     id: imageId,
+    //     formatter: 'path/*'
+    // });
  
+//     var mediaPath =
+//   BrokerUtils.processT4Tags (dbStatement, publishCache, section, galleryContent, language, isPreview,
+//   '<t4 type="content" name="Gallery Image" output="normal" formatter="path/*" />');
+// var mediaDescription =
+//   BrokerUtils.processT4Tags (dbStatement, publishCache, section, galleryContent, language, isPreview, 
+//   '<t4 type="content" name="Gallery Image" output="normal" formatter="description" />');
  
  
   
