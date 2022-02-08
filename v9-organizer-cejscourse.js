@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.12
+     *     @version 7.13
      */
 
 
@@ -75,6 +75,26 @@
          let oMediaStream = mediaObj.getMedia();
      
          return oMediaStream;
+     }
+
+
+
+
+    /***
+      *      Returns a formatted html img tag
+      */
+     function mediaTag(itemPath, itemId) {
+
+        let mediaInfo = getMediaInfo(itemId);
+        let media = readMedia(itemId);
+        let info = new ImageInfo;
+        info.setInput(media);
+
+        let mediaHTML = (info.check())
+                        ? '<img src="' + itemPath + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+                        : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
+
+        return mediaHTML;
      }
 
 
@@ -250,21 +270,13 @@
 
         let iconArray = cejscDict.icons.content.split(',');
         let arrlength = iconArray.length;
-        // let pathArray = [];
         let imgStringArr = [];
-        // pathArray.length = arrlength;
         imgStringArr.length = arrlength;
 
         for (let i = 0; i < arrlength; i++) {
-            let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
-            let mediaInfo = getMediaInfo(iconArray[i]);
-            let media = readMedia(iconArray[i]);
-            let info = new ImageInfo;
-            info.setInput(media);
 
-            imgStringArr[i] =   (info.check())
-                                ? '<img src="' + mediaPath + '" class="listgroupImage figure-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                                : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
+            let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />').trim();
+            imgStringArr[i] = mediaTag(mediaPath, iconArray[i]);
         }
 
         let iconValues = assignList(imgStringArr);
