@@ -202,9 +202,9 @@
       * */
      if (cejscDict.articleImage.content) {
  
-         let imageID = content.get('Image').getID();
-         let mediaInfo = getMediaInfo(imageID);
-         let media = readMedia(imageID);
+         let imageId = content.get('Image').getID();
+         let mediaInfo = getMediaInfo(imageId);
+         let media = readMedia(imageId);
          let info = new ImageInfo;
          info.setInput(media);
  
@@ -217,6 +217,13 @@
          openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
 
      } 
+
+
+     let imagePath = T4Utils.brokerUtils.generateT4Tag({
+        type: 'media',
+        id: imageId,
+        formatter: 'path/*'
+    });
  
  
  
