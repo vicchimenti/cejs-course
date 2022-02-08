@@ -158,6 +158,7 @@
      let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
      let closeBodyWrapper = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+     let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul><br>';
 
      let imageString2 = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
      let openFig = '<figure class="figure hidden visually-hidden">';
@@ -272,16 +273,7 @@
 
         let iconValues = assignList(imgStringArr);
 
-
-        // let imageId = content.get('Image').getID();
-
-
-
-
-    
-        // openFig = '<figure class="figure">';
-        // openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
-        // openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
+        listOfIcons = '<ul class="list-group list-group-horizontal">' + iconValues + '</ul><br>';
 
     } 
 
@@ -308,7 +300,7 @@
              primaryNameString,
              imageString2,
              iconString,
-             cejscDict.hardMedia.content,
+             listOfIcons,
              closeBodyWrapper,
              closeRow,
              endingHTML
