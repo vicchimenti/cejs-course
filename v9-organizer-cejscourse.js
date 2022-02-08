@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.13
+     *     @version 7.14
      */
 
 
@@ -179,8 +179,6 @@
      let closeBodyWrapper = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
      let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-
-    //  let imageString2 = '<span class="imageString hidden visually-hidden">No Image Provided</span>';
      let openFig = '<figure class="figure hidden visually-hidden">';
      let closeFig = '</figure>';
 
@@ -306,7 +304,6 @@
              titleLink,
              subjecString,
              primaryNameString,
-             imageString2,
              iconString,
              listOfIcons,
              closeBodyWrapper,
