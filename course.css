@@ -110,6 +110,10 @@
 
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
     display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
 }
 
 .cejscourseWrapper ul.iconDashboard li:before {
@@ -119,6 +123,7 @@
 .cejscourseWrapper img.listgroupImage {
     max-height: 125px;
     max-width: 125px;
+    padding: 0;
 }
 
 .cejscourseWrapper .articleSummary .panelLinks {
