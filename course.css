@@ -72,13 +72,26 @@
     color: #AA0000;
 }
 
-.cejscourseWrapper .publishDetails {
-    margin: 1.6rem 0;
+.cejscourseWrapper p.card-subtitle.subject {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.cejscourseWrapper .articleSummary.card-body {
+    margin: 0 1rem;
 }
 
 .cejscourseWrapper .articleSummary p {
     font-weight: 500;
 }
+
+
+
+/* .cejscourseWrapper .publishDetails {
+    margin: 1.6rem 0;
+}
+
+
 
 .cejscourseWrapper .articleSummary p.summary {
     font-size: 1.8rem;
@@ -107,7 +120,7 @@
 
 .cejscourseWrapper .audience ul.categories li {
     color: #55B31B;
-}
+} */
 
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
     display: inline-block;
