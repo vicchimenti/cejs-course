@@ -202,8 +202,8 @@
       * 
       * */
       let subjecString =    (cejscDict.subjectDescription.content)
-                            ? '<p class="card-subtitle primarySectionName"><strong>Subject: </strong><em>' + cejscDict.subjectDescription.content + '</em></p>'
-                            : '<p class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</p>';
+                            ? '<p class="card-subtitle subject"><em>' + cejscDict.subjectDescription.content + '</em></p>'
+                            : '<p class="card-text subject visually-hidden hidden">No valid subject provided</p>';
 
 
 
@@ -215,43 +215,6 @@
       let primaryNameString =   (cejscDict.primarySectionName.content)
                                 ? '<p class="card-text primarySectionName"><strong>Primary Section Name: </strong>' + cejscDict.primarySectionName.content + '</p>'
                                 : '<p class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</p>';
-
-
-
-
-
-    /***
-      *  check for icon id
-      * 
-      * */
-    //   let iconString =   (cejscDict.icons.content)
-    //                     ? '<p class="card-text icons"><strong>Media Library Image ID: </strong>' + cejscDict.icons.content + '</p>'
-    //                     : '<p class="card-text icons visually-hidden hidden">No valid icon provided</p>';
- 
- 
- 
- 
-     /***
-      *  Parse for image
-      * 
-      * */
-    //  if (cejscDict.articleImage.content) {
- 
-    //      let imageId = content.get('Image').getID();
-    //      let mediaInfo = getMediaInfo(imageId);
-    //      let media = readMedia(imageId);
-    //      let info = new ImageInfo;
-    //      info.setInput(media);
- 
-    //      imageString =   (info.check())
-    //                      ? '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-    //                      : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img-top" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
-   
-    //      openFig = '<figure class="figure">';
-    //      openImageWrapper = '<div class="imageWrapper col-12 col-lg-4">';
-    //      openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
-
-    //  }
 
 
 
