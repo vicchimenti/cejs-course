@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.15.7
+     *     @version 7.15.8
      */
 
 
@@ -165,23 +165,14 @@
       *  default html initializations
       * 
       * */
-     let beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
-     let endingHTML = '</article>';
-    //  let openImageWrapper = '<div class="imageWrapper col-12 d-none visually-hidden hidden">';
-    //  let closeImageWrapper = '</div>';
-    //  let openRow = '<div class="row g-0 noGap">';
-    //  let closeRow = '</div>';
-    
-    
-  
-    let openCardHeader = '<div class="card-header">';
-    let closeCardHeader = '</div>'
-    let openBodyWrapper = '<div class="articleSummary card-body">';
-    let closeBodyWrapper = '</div>';
-    //  let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-    //  let openFig = '<figure class="figure hidden visually-hidden">';
-    //  let closeFig = '</figure>';
+      let beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
+      let endingHTML = '</article>';
+      let openCardHeader = '<div class="card-header">';
+      let closeCardHeader = '</div>'
+      let openBodyWrapper = '<div class="articleSummary card-body">';
+      let closeBodyWrapper = '</div>';
+      let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+
 
  
  
