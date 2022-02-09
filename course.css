@@ -54,6 +54,19 @@
     padding: 0 2rem 1rem 2rem;
 } */
 
+
+.cejscourseWrapper .card-header {
+    margin: 0 1rem;
+}
+
+.cejscourseWrapper .card-body {
+    margin: 0 1rem;
+}
+
+.cejscourseWrapper ul {
+    margin: 0 1rem;
+}
+
 .cejscourseWrapper h3.card-title {
     color: #AA0000;
     font-family: "Montserrat", sans-serif;
@@ -75,10 +88,6 @@
 .cejscourseWrapper p.card-subtitle.subject {
     font-size: 2rem;
     margin: 0;
-}
-
-.cejscourseWrapper .articleSummary.card-body {
-    margin: 0 1rem;
 }
 
 .cejscourseWrapper .articleSummary p {
