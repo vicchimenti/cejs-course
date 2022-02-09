@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.15.1
+     *     @version 7.15.2
      */
 
 
@@ -109,7 +109,7 @@
 
         for (let i = 0; i < arrayOfValues.length; i++) {
 
-            listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i] + '</li>';
+            listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
         }
 
         return listValues;
