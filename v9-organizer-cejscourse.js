@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.15
+     *     @version 7.15.1
      */
 
 
@@ -180,6 +180,9 @@
      let closeBodyWrapper = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
      let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+
+     let listOfIconIds = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icon ids provided</ul>';
+
      let openFig = '<figure class="figure hidden visually-hidden">';
      let closeFig = '</figure>';
 
@@ -281,6 +284,13 @@
 
         listOfIcons = '<ul class="list-group list-group-horizontal">' + iconValues + '</ul>';
 
+        let idValues = assignList(iconArray);
+
+        listOfIconIds = '<ul class="list-group list-group-horizontal">' + idValues + '</ul>';
+
+
+
+
     } 
 
 
@@ -306,6 +316,7 @@
              primaryNameString,
              iconString,
              listOfIcons,
+             listOfIconIds,
              closeBodyWrapper,
              closeRow,
              endingHTML
