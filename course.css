@@ -114,6 +114,7 @@
 
 .cejscourseWrapper img.listgroupImage {
     max-height: 125px;
+    max-width: 125px;
 }
 
 .cejscourseWrapper .articleSummary .panelLinks {
