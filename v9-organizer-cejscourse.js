@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.15.5
+     *     @version 7.15.6
      */
 
 
@@ -171,10 +171,15 @@
     //  let closeImageWrapper = '</div>';
     //  let openRow = '<div class="row g-0 noGap">';
     //  let closeRow = '</div>';
-     let openBodyWrapper = '<div class="articleSummary card-body">';
-     let closeBodyWrapper = '</div>';
+    
+    
+  
+    let openCardHeader = '<div class="card-header">';
+    let closeCardHeader = '</div>'
+    let openBodyWrapper = '<div class="articleSummary card-body">';
+    let closeBodyWrapper = '</div>';
     //  let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-     let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+    let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
     //  let openFig = '<figure class="figure hidden visually-hidden">';
     //  let closeFig = '</figure>';
 
@@ -280,8 +285,10 @@
      writeDocument(
          [
              beginningHTML,
-             openBodyWrapper,
+             openCardHeader,
              titleLink,
+             closeCardHeader,
+             openBodyWrapper,
              subjecString,
              listOfIcons,
              primaryNameString,
