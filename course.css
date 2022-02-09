@@ -108,6 +108,10 @@
     color: #55B31B;
 }
 
+.cejscourseWrapper ul.iconDashboard li.sdgIcon {
+    display: inline-block;
+}
+
 .cejscourseWrapper ul.iconDashboard li:before {
     content: unset;
 }
