@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.15.6
+     *     @version 7.15.7
      */
 
 
@@ -287,9 +287,9 @@
              beginningHTML,
              openCardHeader,
              titleLink,
+             subjecString,
              closeCardHeader,
              openBodyWrapper,
-             subjecString,
              listOfIcons,
              primaryNameString,
              closeBodyWrapper,
