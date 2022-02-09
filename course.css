@@ -5,14 +5,14 @@
     CEJS Course - Content Type requires Organizer
 
 */
- 
-
 
 .organizerWrapper h2.organizerTitle {
     margin-bottom: 3rem;
 }
 
+
 /* expand small images to fill available space on all browsers */
+
 .cejscourseWrapper img.articleImage {
     padding: 0;
     width: 100%;
@@ -108,8 +108,22 @@
     color: #55B31B;
 }
 
-.cejscourseWrapper ul.categories li:before {
+.cejscourseWrapper ul.iconDashboard li.sdgIcon {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.cejscourseWrapper ul.iconDashboard li:before {
     content: unset;
+}
+
+.cejscourseWrapper img.listgroupImage {
+    max-height: 125px;
+    max-width: 125px;
+    padding: 0;
 }
 
 .cejscourseWrapper .articleSummary .panelLinks {
@@ -173,11 +187,9 @@
 /* Mobile layouts below 992 */
 
 @media screen and (max-width: 991.99px) {
-
     .organizerWrapper .cejscourseWrapper h3.card-title {
         padding: 0;
     }
-
     .cejscourseWrapper div.newsroomArticle.tags {
         width: unset;
     }
@@ -205,7 +217,6 @@
 .cejscourseWrapperZoneb .externalLink a {
     font-size: 1.35rem;
 }
-
 
 .cejscourseWrapperZoneb .row.summaryWrapper {
     margin: 0;
@@ -252,7 +263,6 @@
         width: unset;
     }
 }
-
 
 
 /***
