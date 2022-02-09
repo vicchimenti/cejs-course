@@ -169,14 +169,14 @@
      let endingHTML = '</article>';
     //  let openImageWrapper = '<div class="imageWrapper col-12 d-none visually-hidden hidden">';
     //  let closeImageWrapper = '</div>';
-     let openRow = '<div class="row g-0 noGap">';
-     let closeRow = '</div>';
-     let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
+    //  let openRow = '<div class="row g-0 noGap">';
+    //  let closeRow = '</div>';
+     let openBodyWrapper = '<div class="articleSummary card-body">';
      let closeBodyWrapper = '</div>';
-     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    //  let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
      let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-     let openFig = '<figure class="figure hidden visually-hidden">';
-     let closeFig = '</figure>';
+    //  let openFig = '<figure class="figure hidden visually-hidden">';
+    //  let closeFig = '</figure>';
 
  
  
