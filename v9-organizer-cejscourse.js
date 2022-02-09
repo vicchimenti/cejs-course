@@ -167,8 +167,8 @@
       * */
      let beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
      let endingHTML = '</article>';
-     let openImageWrapper = '<div class="imageWrapper col-12 d-none visually-hidden hidden">';
-     let closeImageWrapper = '</div>';
+    //  let openImageWrapper = '<div class="imageWrapper col-12 d-none visually-hidden hidden">';
+    //  let closeImageWrapper = '</div>';
      let openRow = '<div class="row g-0 noGap">';
      let closeRow = '</div>';
      let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
@@ -219,9 +219,9 @@
       *  check for icon id
       * 
       * */
-      let iconString =   (cejscDict.icons.content)
-                        ? '<p class="card-text icons"><strong>Media Library Image ID: </strong>' + cejscDict.icons.content + '</p>'
-                        : '<p class="card-text icons visually-hidden hidden">No valid icon provided</p>';
+    //   let iconString =   (cejscDict.icons.content)
+    //                     ? '<p class="card-text icons"><strong>Media Library Image ID: </strong>' + cejscDict.icons.content + '</p>'
+    //                     : '<p class="card-text icons visually-hidden hidden">No valid icon provided</p>';
  
  
  
@@ -280,20 +280,12 @@
      writeDocument(
          [
              beginningHTML,
-             openRow,
-             openImageWrapper,
-             openFig,
-             imageString,
-             closeFig,
-             closeImageWrapper,
              openBodyWrapper,
              titleLink,
              subjecString,
-             primaryNameString,
-             iconString,
              listOfIcons,
+             primaryNameString,
              closeBodyWrapper,
-             closeRow,
              endingHTML
          ]
      );
