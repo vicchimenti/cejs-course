@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.15.2
+     *     @version 7.15.4
      */
 
 
@@ -146,26 +146,22 @@
       *      Dictionary of content
       * */
      let cejscDict = {
+
          contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
          articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
          articleImage: getContentValues('<t4 type="content" name="Image" output="normal" formatter="path/*" />'),
          icons: getContentValues('<t4 type="content" name="Icon ID" output="normal" modifiers="striptags,htmlentities" />'),
          primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
          subjectDescription: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
-         hardMedia:getContentValues('<t4 type="media" formatter="path/*" id="3694397" />'),
-
          courseDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="medialibrary,nav_sections,htmlentities" />'),
          fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
          contentId: getContentValues('<t4 type="meta" meta="content_id" />')
+
      };
  
  
  
- 
- 
- 
- 
- 
+  
      /***
       *  default html initializations
       * 
@@ -180,17 +176,9 @@
      let closeBodyWrapper = '</div>';
      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
      let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-
-     let listOfIconIds = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icon ids provided</ul>';
-
      let openFig = '<figure class="figure hidden visually-hidden">';
      let closeFig = '</figure>';
 
- 
- 
- 
- 
- 
  
  
  
@@ -265,32 +253,21 @@
 
 
     /***
-      *  Parse for icons
+      *  Parse and format icons
       * 
       * */
     if (cejscDict.icons.content) {
 
         let iconArray = cejscDict.icons.content.split(',');
-        let arrlength = iconArray.length;
-        let imgStringArr = [];
+        let iconPathArray = [];
 
-        for (let i = 0; i < arrlength; ++i) {
+        for (icon in iconArray) {
 
-            // let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + iconArray[i] + '" />');
-            imgStringArr[i] = mediaTag(iconArray[i]);
+            iconPathArray[icon] = mediaTag(iconArray[icon].trim());
         }
 
-        let iconValues = assignList(imgStringArr);
-
-        listOfIcons = '<ul class="list-group list-group-horizontal">' + iconValues + '</ul>';
-
-        let idValues = assignList(iconArray);
-
-        listOfIconIds = '<ul class="list-group list-group-horizontal">' + idValues + '</ul>';
-
-
-
-
+        let iconValues = assignList(iconPathArray);
+        listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
     } 
 
 
@@ -316,7 +293,6 @@
              primaryNameString,
              iconString,
              listOfIcons,
-             listOfIconIds,
              closeBodyWrapper,
              closeRow,
              endingHTML
