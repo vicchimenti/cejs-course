@@ -74,6 +74,27 @@
  
      return oMediaStream;
  }
+
+
+
+
+/***
+ *      Returns a formatted html img tag
+ */
+ function mediaTag(itemId) {
+
+    let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
+    let mediaInfo = getMediaInfo(itemId);
+    let media = readMedia(itemId);
+    let info = new ImageInfo;
+    info.setInput(media);
+
+    let mediaHTML = (info.check())
+                    ? '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>'
+                    : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
+
+    return mediaHTML;
+ }
  
  
  
