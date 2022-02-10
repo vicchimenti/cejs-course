@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.16.3
+     *     @version 7.16.4
      */
 
 
@@ -252,9 +252,9 @@
       *  check for primary section name
       * 
       * */
-      let primaryNameString =   (cejscDict.primarySectionName.content)
-                                ? '<p class="card-text primarySectionName"><strong>Primary Section Name: </strong>' + cejscDict.primarySectionName.content + '</p>'
-                                : '<p class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</p>';
+    //   let primaryNameString =   (cejscDict.primarySectionName.content)
+    //                             ? '<p class="card-text primarySectionName"><strong>Primary Section Name: </strong>' + cejscDict.primarySectionName.content + '</p>'
+    //                             : '<p class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</p>';
 
 
 
@@ -294,7 +294,6 @@
              closeCardHeader,
              openBodyWrapper,
              listOfIcons,
-             primaryNameString,
              closeBodyWrapper,
              endingHTML
          ]
