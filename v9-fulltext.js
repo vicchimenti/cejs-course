@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.4.7
+ *     @version 7.4.8
  */
 
 
@@ -168,15 +168,10 @@
       let endingHTML = '</article>';
       let openHeaderWrapper = '<div class="col-12 card-header">';
       let closeHeaderWrapper = '</div>';
-      let openImageWrapper = '<div class="cejscImageWrapper col-12 d-none visually-hidden hidden">';
-      let closeImageWrapper = '</div>';
       let openRow = '<div class="row g-0 noGap">';
       let closeRow = '</div>';
       let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
       let closeBodyWrapper = '</div>';
-      let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-      let openFig = '<figure class="figure hidden visually-hidden">';
-      let closeFig = '</figure>';
       let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none"><p class="card-text courseDescription">';
       let closeFooter = '</P></div>';
       let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
@@ -219,18 +214,6 @@
 
 
 
-
-    /***
-      *  check for icon id
-      * 
-      * */
-    //   let iconString =   (cejscDict.iconId.content)
-    //                     ? '<p class="card-text iconId"><strong>Media Library Image ID: </strong>' + cejscDict.iconId.content + '</p>'
-    //                     : '<p class="card-text iconId visually-hidden hidden">No valid icon provided</p>';
- 
-
-
-
     /***
       *  Parse and format icons
       * 
@@ -249,31 +232,6 @@
         listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
     } 
  
- 
- 
- 
-     /***
-      *  Parse for image
-      * 
-      * */
-    //  if (cejscDict.articleImage.content) {
- 
-    //      openImageWrapper = '<figure class="figure">';
-    //      var imageID = content.get('Image').getID();
-    //      var mediaInfo = getMediaInfo(imageID);
-    //      var media = readMedia(imageID);
-    //      var info = new ImageInfo;
-    //      info.setInput(media);
- 
-    //      imageString =               (info.check())
-    //                                  ? '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-    //                                  : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
-
-    //      openFig = '<figure class="figure">';
-    //      openImageWrapper = '<div class="cejscImageWrapper col-12 col-lg-4">';
-    //      openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
-    //  }
-
 
 
 
