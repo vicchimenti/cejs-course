@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.16.1
+     *     @version 7.16.2
      */
 
 
@@ -184,7 +184,7 @@
       * 
       * */
       let titleLink =   (cejscDict.courseDescription.content && cejscDict.courseName.content)
-                        ? '<h3 class="card-title border-0"><a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course details: ' + cejscDict.articleTitle.content + '">' + cejscDict.courseName.content + ' - ' + cejscDict.articleTitle.content + '</a></h3>'
+                        ? '<h3 class="card-title border-0"><a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course details: ' + cejscDict.articleTitle.content + '">' + cejscDict.courseName.content + ' : ' + cejscDict.articleTitle.content + '</a></h3>'
                         : (cejscDict.courseDescription.content && !cejscDict.courseName.content)
                         ? '<h3 class="card-title border-0"><a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course details: ' + cejscDict.articleTitle.content + '">' + cejscDict.articleTitle.content + '</a></h3>'
                         : '<h3 class="card-title border-0">' + cejscDict.contentName.content + '</h3>';
@@ -197,8 +197,8 @@
       * 
       * */
       let subjecString =    (cejscDict.subjectDescription.content)
-                            ? '<p class="card-subtitle subject"><em>' + cejscDict.subjectDescription.content + '</em></p>'
-                            : '<p class="card-text subject visually-hidden hidden">No valid subject provided</p>';
+                            ? '<span class="card-subtitle subject"><em>' + cejscDict.subjectDescription.content + '</em></span>'
+                            : '<span class="card-text subject visually-hidden hidden">No valid subject provided</span>';
 
 
 
