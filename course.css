@@ -24,11 +24,13 @@
 }
 
 .cejscourseWrapper .card-header {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
+    padding-top: 1rem;
 }
 
 .cejscourseWrapper .card-body {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .cejscourseWrapper ul {
@@ -75,8 +77,8 @@
 }
 
 .cejscourseWrapper img.listgroupImage {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 115px;
+    max-width: 115px;
     padding: 0;
 }
 
