@@ -208,7 +208,7 @@
       * 
       * */
     let collegeString = (cejscDict.college.content)
-                        ? '<span class="card-text college"><em>' + cejscDict.college.content + '</em></span>'
+                        ? '<span class="card-text college">' + cejscDict.college.content + '</span>'
                         : '<span class="card-text college visually-hidden hidden">No valid subject provided</span>';
 
 
@@ -219,7 +219,7 @@
       * 
       * */
     let academicLevelString =   (cejscDict.academicLevel.content)
-                                ? '<span class="card-text academicLevel"><em>' + cejscDict.academicLevel.content + '</em></span>'
+                                ? '<span class="card-text academicLevel">' + cejscDict.academicLevel.content + '</span>'
                                 : '<span class="card-text academicLevel visually-hidden hidden">No valid subject provided</span>';
 
 
