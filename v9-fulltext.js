@@ -228,6 +228,26 @@
                         ? '<p class="card-text iconId"><strong>Media Library Image ID: </strong>' + cejscDict.iconId.content + '</p>'
                         : '<p class="card-text iconId visually-hidden hidden">No valid icon provided</p>';
  
+
+
+
+    /***
+      *  Parse and format icons
+      * 
+      * */
+    if (cejscDict.icons.content) {
+
+        let iconArray = cejscDict.icons.content.split(',');
+        let iconPathArray = [];
+
+        for (icon in iconArray) {
+
+            iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+        }
+
+        let iconValues = assignList(iconPathArray);
+        listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+    } 
  
  
  
@@ -236,23 +256,23 @@
       *  Parse for image
       * 
       * */
-     if (cejscDict.articleImage.content) {
+    //  if (cejscDict.articleImage.content) {
  
-         openImageWrapper = '<figure class="figure">';
-         var imageID = content.get('Image').getID();
-         var mediaInfo = getMediaInfo(imageID);
-         var media = readMedia(imageID);
-         var info = new ImageInfo;
-         info.setInput(media);
+    //      openImageWrapper = '<figure class="figure">';
+    //      var imageID = content.get('Image').getID();
+    //      var mediaInfo = getMediaInfo(imageID);
+    //      var media = readMedia(imageID);
+    //      var info = new ImageInfo;
+    //      info.setInput(media);
  
-         imageString =               (info.check())
-                                     ? '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-                                     : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
+    //      imageString =               (info.check())
+    //                                  ? '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+    //                                  : '<img src="' + cejscDict.articleImage.content + '" class="articleImage figure-img card-img" alt="' + cejscDict.articleTitle.content + '" loading="auto" />';
 
-         openFig = '<figure class="figure">';
-         openImageWrapper = '<div class="cejscImageWrapper col-12 col-lg-4">';
-         openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
-     }
+    //      openFig = '<figure class="figure">';
+    //      openImageWrapper = '<div class="cejscImageWrapper col-12 col-lg-4">';
+    //      openBodyWrapper = '<div class="articleSummary col-12 col-lg-8 card-body">';
+    //  }
 
 
 
