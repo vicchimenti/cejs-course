@@ -63,15 +63,15 @@
     text-decoration: underline;
 } */
 
-.cejscourseWrapper p.card-subtitle {
+.cejscourseItem p.card-subtitle {
     font-size: 2rem;
 }
 
-.cejscourseWrapper .articleSummary p {
+.cejscourseItem .articleSummary p {
     font-weight: 500;
 }
 
-.cejscourseWrapper ul.iconDashboard li.sdgIcon {
+.cejscourseItem ul.iconDashboard li.sdgIcon {
     display: inline-block;
     padding: 0;
     margin-bottom: 0;
@@ -79,11 +79,11 @@
     border: none;
 }
 
-.cejscourseWrapper ul.iconDashboard li:before {
+.cejscourseItem ul.iconDashboard li:before {
     content: unset;
 }
 
-.cejscourseWrapper img.listgroupImage {
+.cejscourseItem img.listgroupImage {
     max-height: 125px;
     max-width: 125px;
     padding: 0;
