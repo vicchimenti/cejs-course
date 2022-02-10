@@ -271,7 +271,6 @@
             openBodyWrapper,
             subjecString,
             primaryNameString,
-            iconString,
             closeBodyWrapper,
             closeRow,
             openFooter,
