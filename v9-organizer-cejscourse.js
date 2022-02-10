@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.16.2
+     *     @version 7.16.3
      */
 
 
@@ -237,7 +237,13 @@
                             ? '<p class="card-subtitle">' + subjectString + ' | ' + academicLevelString + '</p>'
                             : (!cejscDict.subjectDescription.content && cejscDict.college.content && cejscDict.academicLevel.content)
                             ? '<p class="card-subtitle">' + collegeString + ' | ' + academicLevelString + '</p>'
-                            : '<span class="card-text academicLevel visually-hidden hidden">No valid subject provided</span>';
+                            : (!cejscDict.subjectDescription.content && !cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + academicLevelString + '</p>'
+                            : (!cejscDict.subjectDescription.content && cejscDict.college.content && !cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + collegeString + '</p>'
+                            : (cejscDict.subjectDescription.content && !cejscDict.college.content && !cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + '</p>'
+                            : '<span class="card-subtitle visually-hidden hidden">No valid subtitle provided</span>';
 
 
 
