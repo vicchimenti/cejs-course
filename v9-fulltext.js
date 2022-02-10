@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.4.12
+ *     @version 7.4.13
  */
 
 
@@ -313,12 +313,10 @@ function assignList(arrayOfValues) {
             titleLink,
             subtitleString,
             closeHeaderWrapper,
-            openRow,
             openBodyWrapper,
             listOfIcons,
             primaryNameString,
             closeBodyWrapper,
-            closeRow,
             openFooter,
             descriptionString,
             closeFooter,
