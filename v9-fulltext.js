@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.4.8
+ *     @version 7.4.10
  */
 
 
@@ -154,7 +154,7 @@ function assignList(arrayOfValues) {
         fullTextLink: getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />'),
         anchorTag: getContentValues('<t4 type="meta" meta="html_anchor" />')
-        
+
      };
  
  
@@ -185,8 +185,8 @@ function assignList(arrayOfValues) {
       *  check for fulltext content
       * 
       * */
-      let titleLink =   (cejscDict.articleTitle.content)
-                        ? '<h1 id="pageTitle" class="card-title">' + cejscDict.articleTitle.content + '</h1>'
+      let titleLink =   (cejscDict.articleTitle.content && cejscDict.courseName.content)
+                        ? '<h1 id="pageTitle" class="card-title">' + cejscDict.courseName.content + ' : ' + cejscDict.articleTitle.content + '</h1>'
                         : '<h1 id="pageTitle" class="card-title">' + cejscDict.contentName.content + '</h1>';
 
 
