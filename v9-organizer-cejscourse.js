@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.16
+     *     @version 7.16.1
      */
 
 
@@ -183,9 +183,11 @@
       *  check for fulltext content
       * 
       * */
-      let titleLink =   (cejscDict.courseDescription.content)
+      let titleLink =   (cejscDict.courseDescription.content && cejscDict.courseName.content)
+                        ? '<h3 class="card-title border-0"><a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course details: ' + cejscDict.articleTitle.content + '">' + cejscDict.courseName.content + ' - ' + cejscDict.articleTitle.content + '</a></h3>'
+                        : (cejscDict.courseDescription.content && !cejscDict.courseName.content)
                         ? '<h3 class="card-title border-0"><a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course details: ' + cejscDict.articleTitle.content + '">' + cejscDict.articleTitle.content + '</a></h3>'
-                        : '<h3 class="card-title border-0">' + cejscDict.articleTitle.content + '</h3>';
+                        : '<h3 class="card-title border-0">' + cejscDict.contentName.content + '</h3>';
 
 
 
