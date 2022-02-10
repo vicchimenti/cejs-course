@@ -196,9 +196,20 @@
       *  check for subject Description
       * 
       * */
-      let subjecString =    (cejscDict.subjectDescription.content)
+      let subjectString =    (cejscDict.subjectDescription.content)
                             ? '<span class="card-subtitle subject"><em>' + cejscDict.subjectDescription.content + '</em></span>'
                             : '<span class="card-text subject visually-hidden hidden">No valid subject provided</span>';
+
+
+
+
+    /***
+      *  check for subject Description
+      * 
+      * */
+      let subjectString =    (cejscDict.subjectDescription.content)
+      ? '<span class="card-subtitle subject"><em>' + cejscDict.subjectDescription.content + '</em></span>'
+      : '<span class="card-text subject visually-hidden hidden">No valid subject provided</span>';
 
 
 
@@ -245,7 +256,7 @@
              beginningHTML,
              openCardHeader,
              titleLink,
-             subjecString,
+             subjectString,
              closeCardHeader,
              openBodyWrapper,
              listOfIcons,
