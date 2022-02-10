@@ -55,9 +55,8 @@
     color: #AA0000;
 }
 
-.cejscourseWrapper p.card-subtitle.subject {
+.cejscourseWrapper p.card-subtitle {
     font-size: 2rem;
-    margin: 0;
 }
 
 .cejscourseWrapper .articleSummary p {
