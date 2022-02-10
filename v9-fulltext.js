@@ -224,9 +224,9 @@
       *  check for icon id
       * 
       * */
-      let iconString =   (cejscDict.iconId.content)
-                        ? '<p class="card-text iconId"><strong>Media Library Image ID: </strong>' + cejscDict.iconId.content + '</p>'
-                        : '<p class="card-text iconId visually-hidden hidden">No valid icon provided</p>';
+    //   let iconString =   (cejscDict.iconId.content)
+    //                     ? '<p class="card-text iconId"><strong>Media Library Image ID: </strong>' + cejscDict.iconId.content + '</p>'
+    //                     : '<p class="card-text iconId visually-hidden hidden">No valid icon provided</p>';
  
 
 
