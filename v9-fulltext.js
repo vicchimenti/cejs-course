@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.4.10
+ *     @version 7.4.11
  */
 
 
@@ -192,13 +192,59 @@ function assignList(arrayOfValues) {
 
 
 
+
     /***
       *  check for subject Description
       * 
       * */
-      let subjecString =    (cejscDict.subjectDescription.content)
-                            ? '<p class="card-subtitle primarySectionName"><strong>Subject: </strong><em>' + cejscDict.subjectDescription.content + '</em></p>'
-                            : '<p class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</p>';
+     let subjectString =    (cejscDict.subjectDescription.content)
+                            ? '<span class="card-text subject"><em>' + cejscDict.subjectDescription.content + '</em></span>'
+                            : '<span class="card-text subject visually-hidden hidden">No valid subject provided</span>';
+
+
+
+
+    /***
+    *  check for subject college
+    * 
+    * */
+    let collegeString = (cejscDict.college.content)
+                        ? '<span class="card-text college">' + cejscDict.college.content + '</span>'
+                        : '<span class="card-text college visually-hidden hidden">No valid subject provided</span>';
+
+
+
+
+    /***
+    *  check for subject level
+    * 
+    * */
+    let academicLevelString =   (cejscDict.academicLevel.content)
+                                ? '<span class="card-text academicLevel">' + cejscDict.academicLevel.content + '</span>'
+                                : '<span class="card-text academicLevel visually-hidden hidden">No valid subject provided</span>';
+
+
+
+
+    /***
+    *  define subtitle
+    * 
+    * */
+    let subtitleString =    (cejscDict.subjectDescription.content && cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + ' | ' + collegeString + ' | ' + academicLevelString + '</p>'
+                            : (cejscDict.subjectDescription.content && cejscDict.college.content && !cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + ' | ' + collegeString + '</p>'
+                            : (cejscDict.subjectDescription.content && !cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + ' | ' + academicLevelString + '</p>'
+                            : (!cejscDict.subjectDescription.content && cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + collegeString + ' | ' + academicLevelString + '</p>'
+                            : (!cejscDict.subjectDescription.content && !cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + academicLevelString + '</p>'
+                            : (!cejscDict.subjectDescription.content && cejscDict.college.content && !cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + collegeString + '</p>'
+                            : (cejscDict.subjectDescription.content && !cejscDict.college.content && !cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + '</p>'
+                            : '<span class="card-subtitle visually-hidden hidden">No valid subtitle provided</span>';
 
 
 
@@ -265,6 +311,7 @@ function assignList(arrayOfValues) {
             beginningHTML,
             openHeaderWrapper,
             titleLink,
+            subtitleString,
             closeHeaderWrapper,
             openRow,
 
