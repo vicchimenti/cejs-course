@@ -10,7 +10,7 @@
     font-size: 3.8rem;
     font-weight: 500;
     hyphens: none;
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0 0 0;
     margin: 0;
 }
 
@@ -61,6 +61,10 @@
 
 .announcementFullText.newsArticleWrapper .externalLink a:focus {
     text-decoration: underline;
+}
+
+.cejscourseWrapper p.card-subtitle {
+    font-size: 2rem;
 }
 
 .announcementFullText .articleSummary p {

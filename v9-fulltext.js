@@ -316,7 +316,6 @@ function assignList(arrayOfValues) {
             openRow,
 
             openBodyWrapper,
-            subjecString,
             primaryNameString,
             closeBodyWrapper,
             closeRow,
