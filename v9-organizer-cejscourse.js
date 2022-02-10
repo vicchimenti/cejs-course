@@ -204,12 +204,12 @@
 
 
     /***
-      *  check for subject Description
+      *  check for subject college
       * 
       * */
-      let subjectString =    (cejscDict.subjectDescription.content)
-      ? '<span class="card-subtitle subject"><em>' + cejscDict.subjectDescription.content + '</em></span>'
-      : '<span class="card-text subject visually-hidden hidden">No valid subject provided</span>';
+    let collegeString = (cejscDict.college.content)
+                        ? '<span class="card-subtitle college"><em>' + cejscDict.college.content + '</em></span>'
+                        : '<span class="card-text college visually-hidden hidden">No valid subject provided</span>';
 
 
 
