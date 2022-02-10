@@ -196,9 +196,9 @@
       *  check for subject Description
       * 
       * */
-      let subjectString =    (cejscDict.subjectDescription.content)
-                            ? '<span class="card-subtitle subject"><em>' + cejscDict.subjectDescription.content + '</em></span>'
-                            : '<span class="card-text subject visually-hidden hidden">No valid subject provided</span>';
+    let subjectString = (cejscDict.subjectDescription.content)
+                        ? '<span class="card-text subject"><em>' + cejscDict.subjectDescription.content + '</em></span>'
+                        : '<span class="card-text subject visually-hidden hidden">No valid subject provided</span>';
 
 
 
@@ -208,8 +208,36 @@
       * 
       * */
     let collegeString = (cejscDict.college.content)
-                        ? '<span class="card-subtitle college"><em>' + cejscDict.college.content + '</em></span>'
+                        ? '<span class="card-text college"><em>' + cejscDict.college.content + '</em></span>'
                         : '<span class="card-text college visually-hidden hidden">No valid subject provided</span>';
+
+
+
+
+    /***
+      *  check for subject level
+      * 
+      * */
+    let academicLevelString =   (cejscDict.academicLevel.content)
+                                ? '<span class="card-text academicLevel"><em>' + cejscDict.academicLevel.content + '</em></span>'
+                                : '<span class="card-text academicLevel visually-hidden hidden">No valid subject provided</span>';
+
+
+
+
+    /***
+      *  define subtitle
+      * 
+      * */
+    let subtitleString =    (cejscDict.subjectDescription.content && cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + ' | ' + collegeString + ' | ' + academicLevelString + '</p>'
+                            : (cejscDict.subjectDescription.content && cejscDict.college.content && !cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + ' | ' + collegeString + '</p>'
+                            : (cejscDict.subjectDescription.content && !cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + subjectString + ' | ' + academicLevelString + '</p>'
+                            : (!cejscDict.subjectDescription.content && cejscDict.college.content && cejscDict.academicLevel.content)
+                            ? '<p class="card-subtitle">' + collegeString + ' | ' + academicLevelString + '</p>'
+                            : '<span class="card-text academicLevel visually-hidden hidden">No valid subject provided</span>';
 
 
 
@@ -256,7 +284,7 @@
              beginningHTML,
              openCardHeader,
              titleLink,
-             subjectString,
+             subtitleString,
              closeCardHeader,
              openBodyWrapper,
              listOfIcons,
