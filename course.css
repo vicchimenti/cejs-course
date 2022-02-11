@@ -63,6 +63,11 @@
     font-weight: 500;
 }
 
+.cejscourseWrapper p.shortSummary a {
+    color: #088099;
+    text-decoration: none;
+}
+
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
     display: inline-block;
     padding: 0;
