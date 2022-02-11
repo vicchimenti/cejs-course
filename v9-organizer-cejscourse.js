@@ -194,6 +194,17 @@
 
 
     /***
+      *  check for summary Description
+      * 
+      * */
+    let summaryString = (cejscDict.subjectDescription.content)
+                        ? '<p class="card-text summary">' + cejscDict.summaryDescription.content + '</p>'
+                        : '<span class="card-text summary visually-hidden hidden">No valid summary provided</span>';
+
+
+
+
+    /***
       *  check for subject Description
       * 
       * */
@@ -282,6 +293,7 @@
              subtitleString,
              closeCardHeader,
              openBodyWrapper,
+             summaryString,
              listOfIcons,
              closeBodyWrapper,
              endingHTML
