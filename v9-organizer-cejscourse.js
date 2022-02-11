@@ -1,8 +1,8 @@
     /***
-     *     @author Victor Chimenti, MSCS
-     *     @file v9-organizer-cejscourse.js
-     *          v9/organizer/cejscourse
-     *          id:5650
+     *     @author  Victor Chimenti, MSCS
+     *     @file    v9-organizer-cejscourse.js
+     *                  v9/organizer/cejscourse
+     *                  id:5650
      *
      *     This content type will work in conjunction with the Organizer and each item
      *     will contain one announcement.
