@@ -76,6 +76,15 @@
     text-decoration: underline;
 }
 
+.cejscourseWrapper p.shortSummary:after {
+    color: #aa0000;
+    content: ' b';
+    font-family: 'seattle-u';
+    position: relative;
+    text-transform: lowercase;
+    top: 2px;
+}
+
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
     display: inline-block;
     padding: 0;
