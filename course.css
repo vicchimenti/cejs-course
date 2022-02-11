@@ -64,8 +64,16 @@
 }
 
 .cejscourseWrapper p.shortSummary a {
-    color: #088099;
+    color: #aa0000;
     text-decoration: none;
+}
+
+.cejscourseWrapper p.shortSummary a:hover {
+    text-decoration: underline;
+}
+
+.cejscourseWrapper p.shortSummary a:focus {
+    text-decoration: underline;
 }
 
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
