@@ -124,14 +124,14 @@ $(function () {
                             console.log("typeValue: " + typeValue);
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
+                                $(this).parents('.cejscourseWrapper').removeClass('hideByLevel');
                             } else {
-                                $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
+                                $(this).parents('.cejscourseWrapper').addClass('hideByLevel');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.cejscourseWrapper').removeClass('hideBySchool');
+                        $('.cejscourseWrapper').removeClass('hideByLevel');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
