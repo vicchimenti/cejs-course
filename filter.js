@@ -10,7 +10,7 @@
 *   This script searches the Law School faculty profile content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 3.8
+*   @version 3.9
 */
 
 
@@ -131,26 +131,13 @@ $(function () {
                     elementKeys[0] = 'Any';
                     $('input[name=SelectBox-ByGoal]:checked').each(function (item) {
                         elementKeys[item] = $(this).val();
-                        console.log("typeKey: " + elementKeys[item]);
-
                     });
                     if (elementKeys[0] != "Any") {
-                        // let target =  $("img.listgroupImage");
                         $('ul.iconDashboard').filter(function (i, e) {
-
-
-
                             let elementValue = $(this).children("img.listgroupImage").attr("aria-label");
-                            console.log("elementValue: " + elementValue);
-
-                            // let elementValue = $(this).text();
                             $(this).parents('.cejscourseWrapper').addClass('hideByGoal');
-                            console.log('addClass');
-
                             for (let index = 0; index < elementKeys.length; index++) {
                                 if (elementValue.includes(elementKeys[index])) {
-                                    console.log('elementKey: ' + elementKeys[index]);
-                                    console.log('removeClass');
                                     $(this).parents('.cejscourseWrapper').removeClass('hideByGoal');
                                 }
                             }
