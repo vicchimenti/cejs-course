@@ -139,21 +139,20 @@ $(function () {
                         $('SelectBox-ByGoal ul.iconDashboard').filter(function (i, e) {
                             let elementValue = $(target).attr("aria-label");
                             // let elementValue = $(this).text();
-                            $(this).parents('.ignatianArticle').addClass('hideByElement');
+                            $(this).parents('.cejscourseWrapper').addClass('hideByGoal');
                             for (let index = 0; index < elementKeys.length; index++) {
                                 if (elementValue.includes(elementKeys[index])) {
-                                    $(this).parents('.ignatianArticle').removeClass('hideByElement');
+                                    $(this).parents('.cejscourseWrapper').removeClass('hideByGoal');
                                 }
                             }
                         });
                     } else {
-                        $('.ignatianArticle').removeClass('hideByElement');
+                        $('.cejscourseWrapper').removeClass('hideByGoal');
                     }
                     parseItems.process();
                 });
             });
 
-            console.log ($(x).attr("aria-label"));
 
 
         }, 10);
