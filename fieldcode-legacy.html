@@ -1,0 +1,49 @@
+<!--
+*   @author Victor Chimenti, MSCS
+*   @file fieldcode.html
+*
+*   CEJS SDG Course Filter/Search Engine
+*   Intended to reduce the number of Articles that render based on user provided parameters
+*   User may filter by keyword input and school
+-->
+
+<form action="#" id="articleFilter">
+    <!-- Search Field -->
+    <fieldset for="articleFilter">
+
+
+
+        <div class="col-xs-12 form-group" id="keystroke_filter_field">
+            <label for="keystroke_filter" id="keystrokeLabel">Filter Articles</label>
+            <input type="text" class="form-control" name="articleScan" value="" id="keystroke_filter" placeholder="Search" autofocus aria-label="Filter Articles" />
+        </div>
+
+
+
+        <!-- Search By Type  -->
+        <div class="col-xs-12 form-group" id="SelectBox-ByType">
+            <legend for="SelectBox-ByType">School</legend>
+
+            <input type="checkbox" name="SelectBox-ByType" id="Albers School of Business and Economics" value="Albers School of Business and Economics" />
+            <label for="Albers School of Business and Economics">Albers School of Business and Economics</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="College of Arts and Sciences" value="College of Arts and Sciences" />
+            <label for="College of Arts and Sciences">College of Arts and Sciences</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="College of Education" value="College of Education" />
+            <label for="College of Education">College of Education</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="College of Nursing" value="College of Nursing" />
+            <label for="College of Nursing">College of Nursing</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="College of Science and Engineering" value="College of Science and Engineering" />
+            <label for="College of Science and Engineering">College of Science and Engineering</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="School of Law" value="School of Law" />
+            <label for="School of Law">School of Law</label><br />
+        </div>
+
+
+
+    </fieldset>
+</form>
