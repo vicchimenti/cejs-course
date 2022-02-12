@@ -136,10 +136,10 @@ $(function () {
                     });
                     if (elementKeys[0] != "Any") {
                         let target =  $("img.listgroupImage");
-                        $('.cejscourseWrapper ul.iconDashboard li').filter(function (i, e) {
+                        $('.cejscourseWrapper ul.iconDashboard li img.listgroupImage').filter(function (i, e) {
                             console.log("iconDashboard");
 
-                            let elementValue = $(target).attr("aria-label");
+                            let elementValue = $(this).attr("aria-label");
                             console.log("elementValue: " + elementValue);
 
                             // let elementValue = $(this).text();
