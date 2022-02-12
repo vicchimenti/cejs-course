@@ -135,9 +135,8 @@ $(function () {
 
                     });
                     if (elementKeys[0] != "Any") {
-                        let target =  $("img.listgroupImage");
+                        // let target =  $("img.listgroupImage");
                         $('.cejscourseWrapper ul.iconDashboard li img.listgroupImage').filter(function (i, e) {
-                            console.log("iconDashboard");
 
                             let elementValue = $(this).attr("aria-label");
                             console.log("elementValue: " + elementValue);
@@ -146,6 +145,8 @@ $(function () {
                             $(this).parents('.cejscourseWrapper').addClass('hideByGoal');
                             for (let index = 0; index < elementKeys.length; index++) {
                                 if (elementValue.includes(elementKeys[index])) {
+                                    console.log('elementKey: ' + elementKeys[index]);
+                                    console.log('removeClass');
                                     $(this).parents('.cejscourseWrapper').removeClass('hideByGoal');
                                 }
                             }
