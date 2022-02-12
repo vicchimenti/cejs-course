@@ -40,7 +40,7 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function () {
                     // assign array of currently visible content items
-                    visibleItems = $('.lawFacultyWrapper').not('.hideByText, .hideByType');
+                    visibleItems = $('.cejscourseWrapper').not('.hideByText, .hideBySchool, .hideByLevel');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -64,7 +64,7 @@ $(function () {
                     let keyword = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
                     $(function () {
-                        $('.lawFacultyWrapper').filter(function () {
+                        $('.cejscourseWrapper').filter(function () {
                             // when the search key is not present in the item then hide the item
                             $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
@@ -93,14 +93,14 @@ $(function () {
                             console.log("typeValue: " + typeValue);
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.lawFacultyWrapper').removeClass('hideByType');
+                                $(this).parents('.cejscourseWrapper').removeClass('hideByType');
                             } else {
-                                $(this).parents('.lawFacultyWrapper').addClass('hideByType');
+                                $(this).parents('.cejscourseWrapper').addClass('hideByType');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.lawFacultyWrapper').removeClass('hideByType');
+                        $('.cejscourseWrapper').removeClass('hideByType');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
