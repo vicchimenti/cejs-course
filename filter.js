@@ -101,10 +101,11 @@ $(function () {
                 $('form input:radio').change(function () {
                     let typeKey = $(this).val();
                     let viewAll = "All";
-
+                    console.log("typeKey: " + typeKey);
                     if (typeKey != viewAll) {
                         $('.academicLevel').filter(function (i, e) {
                             var typeValue = $(this).text();
+                            console.log("typeValue: " + typeValue);
 
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.cejscourseWrapper').removeClass('hideByLevel');
