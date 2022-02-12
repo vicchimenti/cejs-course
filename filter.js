@@ -98,7 +98,7 @@ $(function () {
 
             //   ***   Course Level Filter   ***   //
             $(function () {
-                $('form input:radio').change(function () {
+                $('#SelectBox-ByLevel input:radio').change(function () {
                     let typeKey = $(this).val();
                     let viewAll = "All";
                     console.log("typeKey: " + typeKey);
