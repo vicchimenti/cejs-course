@@ -34,20 +34,20 @@
       *      Extract values from T4 element tags
       *      and confirm valid existing content item field
       */
-     function getContentValues(tag) {
-         try {
-             let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
-             return {
-                 isError: false,
-                 content: _tag == '' ? null : _tag
-             }
-         } catch (error) {
-             return {
-                 isError: true,
-                 message: error.message
-             }
-         }
-     }
+    function getContentValues(tag) {
+        try {
+            let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
+            return {
+                isError: false,
+                content: _tag == '' ? null : _tag
+            }
+        } catch (error) {
+            return {
+                isError: true,
+                message: error.message
+            }
+        }
+    }
      
      
      
@@ -55,13 +55,13 @@
      /***
       *      Returns a media object
       */
-     function getMediaInfo(mediaID) {
+    function getMediaInfo(mediaID) {
      
-         let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-         let media = mediaManager.get(mediaID, language);
-     
-         return media;
-     }
+        let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+        let media = mediaManager.get(mediaID, language);
+    
+        return media;
+    }
      
      
      
@@ -69,13 +69,13 @@
      /***
       *      Returns a media stream object
       */
-     function readMedia(mediaID) {
+    function readMedia(mediaID) {
      
-         let mediaObj = getMediaInfo(mediaID);
-         let oMediaStream = mediaObj.getMedia();
-     
-         return oMediaStream;
-     }
+        let mediaObj = getMediaInfo(mediaID);
+        let oMediaStream = mediaObj.getMedia();
+    
+        return oMediaStream;
+    }
 
 
 
@@ -83,7 +83,7 @@
     /***
       *      Returns a formatted html img tag
       */
-     function mediaTag(itemId) {
+    function mediaTag(itemId) {
 
         let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
         let mediaInfo = getMediaInfo(itemId);
@@ -96,7 +96,58 @@
                         : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
 
         return mediaHTML;
-     }
+    }
+
+
+
+
+    /***
+     *      Returns a formatted html img tag
+     */
+    function wrapperTargets(idList) {
+
+        let mediaIdArray = idList.split(',');
+        let targetArray = [];
+
+        for (mediaId in mediaIdArray) {
+
+            targetArray[mediaId] = getTarget(mediaIdArray[mediaId].trim());
+        }
+
+        let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
+        let mediaInfo = getMediaInfo(itemId);
+        let media = readMedia(itemId);
+        let info = new ImageInfo;
+        info.setInput(media);
+
+        let mediaHTML = (info.check())
+                        ? '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>'
+                        : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
+
+        return mediaHTML;
+    }
+    
+
+
+
+
+    /***
+     *      Returns a formatted html img tag
+     */
+    function wrapperTargets(idList) {
+
+        let mediaIdArray = idList.split(',');
+        let targetArray = [];
+
+        for (mediaId in mediaIdArray) {
+
+            targetArray[mediaId] = getTarget(mediaIdArray[mediaId].trim());
+        }
+
+
+
+        return targets;
+    }
 
 
 
@@ -121,13 +172,13 @@
      /***
       *      Write the document
       */
-     function writeDocument(array) {
+    function writeDocument(array) {
      
          for (let i = 0; i < array.length; i++) {
      
-             document.write(array[i]);
+            document.write(array[i]);
          }
-     }
+    }
  
  
  
@@ -168,7 +219,6 @@
       *  default html initializations
       * 
       * */
-      let beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
       let endingHTML = '</article>';
       let openCardHeader = '<div class="card-header">';
       let closeCardHeader = '</div>'
@@ -277,7 +327,15 @@
 
         let iconValues = assignList(iconPathArray);
         listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-    } 
+    }
+
+
+
+
+    let beginningHTML = (cejscDict.icons.content) 
+                        ?
+                        : '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
+
 
 
  
