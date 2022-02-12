@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.4
+     *     @version 8.1.5
      */
 
 
@@ -148,7 +148,7 @@
 
             if (arrayOfValues[i]) {
                 let cleanValue = arrayOfValues[i].replace(/\s/g, '-');
-                listValues += ' ' + cleanValue.trim() + '';
+                listValues += '' + cleanValue.trim() + ' ';
             }
         }
 
