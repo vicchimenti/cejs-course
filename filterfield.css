@@ -1,21 +1,18 @@
-#filterFieldWrapper {
+/* #filterFieldWrapper {
     margin: 0 10px 10px 10px;
 }
 
 #filterField {
     padding: 15px 0 30px 0;
     border-top: 0;
-}
+} */
 
 #filterField legend {
     border-bottom: none;
-    font-family: sans-serif;
-    font-size: 1.75rem;
-    font-weight: 550;
-    margin-bottom: 0.5rem;
+    max-width: 1rem 0;
 }
 
-#filterField input[type=text] {
+/* #filterField input[type=text] {
     color: #333333;
     font-weight: 400;
     font-size: 1.4rem;
@@ -26,9 +23,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-}
+} */
 
-#SelectBox-ByType select {
+/* #SelectBox-ByType select {
     color: #333333;
     font-weight: 400;
     font-size: 1.4rem;
@@ -39,34 +36,34 @@
     border: 1px solid #ccc;
     border-radius: 17px;
     width: 100%;
-}
+} */
 
-div#zoneB div#SelectBox-ByType label {
+/* div#zoneB div#SelectBox-ByType label {
     display: inline;
     font-size: 1rem;
 }
 
 div#zoneB div#SelectBox-ByType legend {
     font-size: 1.5rem;
-}
+} */
 
 div#zoneB div#filterField div#keystroke_filter_field label#keystrokeLabel {
     display: none;
 }
 
 @media (max-width:767.999px) {
-    #filterFieldWrapper {
+    /* #filterFieldWrapper {
         padding-bottom: 2rem;
-    }
+    } */
     #filterFieldWrapper div#filterField div#keystroke_filter_field label#keystrokeLabel {
         display: none;
     }
 }
 
 @media (min-width:767.999px) and (max-width: 991.999px) {
-    fieldset {
+    /* fieldset {
         padding-bottom: 20px;
-    }
+    } */
 }
 
 .noResultsToShow {
