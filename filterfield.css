@@ -14,7 +14,8 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
 }
 
 .hideByText,
-.hideByType,
+.hideByLevel,
+.hideBySchool,
 .hideResultsMessage {
     display: none;
 }
