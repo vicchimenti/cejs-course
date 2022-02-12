@@ -10,7 +10,7 @@
 *   This script searches the Law School faculty profile content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 3.1
+*   @version 3.2
 */
 
 
@@ -113,27 +113,27 @@ $(function () {
             //   ***   Course Level Filter   ***   //
             $(function () {
                 $('form input:radio').change(function () {
-                    // Assign Search Key
+
                     let typeKey = $(this).val();
                     let viewAll = "All";
                     console.log("typeKey: " + typeKey);
-                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
+
                     if (typeKey != viewAll) {
                         $('.academicLevel').filter(function (i, e) {
                             var typeValue = $(this).text();
                             console.log("typeValue: " + typeValue);
-                            // Check to see if the Key and Value are a Match
+
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.cejscourseWrapper').removeClass('hideByLevel');
                             } else {
                                 $(this).parents('.cejscourseWrapper').addClass('hideByLevel');
                             }
+
                         });
-                        // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
                         $('.cejscourseWrapper').removeClass('hideByLevel');
                     }
-                    // parse out unselected content items and limit display to user selected items
+
                     parseItems.process();
                 });
             });
