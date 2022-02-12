@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 7.16.12
+     *     @version 8.0
      */
 
 
@@ -47,6 +47,24 @@
                 message: error.message
             }
         }
+    }
+
+
+
+
+    /***
+     *      Returns an array of list items
+     */
+    function assignList(arrayOfValues) {
+
+        let listValues = '';
+
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
+        }
+
+        return listValues;
     }
      
      
@@ -111,13 +129,30 @@
         let info = new ImageInfo;
         info.setInput(media);
 
-        let target =    (info.check())
-                        ? '' + mediaInfo.getName() + ''
-                        : null;
+        let target = (info.check()) ? '' + mediaInfo.getName() + '' : null;
 
         return target;
     }
-    
+
+
+
+
+    /***
+     *      Returns an array of list items
+     */
+    function formatTargets(arrayOfValues) {
+
+        let listValues = '';
+
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            if (arrayOfValues[i]) {
+                listValues += '' + arrayOfValues[i].trim() + '';
+            }
+        }
+
+        return listValues;
+    }
 
 
 
@@ -135,26 +170,9 @@
             targetArray[mediaId] = getTarget(mediaIdArray[mediaId].trim());
         }
 
-
+        let targets = formatTargets(targetArray);
 
         return targets;
-    }
-
-
-
-     /***
-     *      Returns an array of list items
-     */
-    function assignList(arrayOfValues) {
-
-        let listValues = '';
-
-        for (let i = 0; i < arrayOfValues.length; i++) {
-
-            listValues += '<li class="list-group-item sdgIcon">' + arrayOfValues[i].trim() + '</li>';
-        }
-
-        return listValues;
     }
      
      
@@ -216,6 +234,7 @@
       let openBodyWrapper = '<div class="articleSummary card-body">';
       let closeBodyWrapper = '</div>';
       let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+      let beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
 
 
  
@@ -323,9 +342,15 @@
 
 
 
-    let beginningHTML = (cejscDict.icons.content) 
-                        ?
-                        : '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
+
+    /***
+      *  Parse for media item titles and add to wrapper classes for isotope search engine
+      * 
+      * */
+    if (cejscDict.icons.content) {
+        let mediaTitles = wrapperTargets(cejscDict.icons.content);
+        beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3 ' + mediaTitles + '" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
+    }
 
 
 
