@@ -135,8 +135,10 @@ $(function () {
                         elementKeys[item] = $(this).val();
                     });
                     if (elementKeys[0] != "Any") {
-                        $('div.pedagogy ul.categories').filter(function (i, e) {
-                            let elementValue = $(this).text();
+                        let target =  $("img.listgroupImage");
+                        $('SelectBox-ByGoal ul.iconDashboard').filter(function (i, e) {
+                            let elementValue = $(target).attr("aria-label");
+                            // let elementValue = $(this).text();
                             $(this).parents('.ignatianArticle').addClass('hideByElement');
                             for (let index = 0; index < elementKeys.length; index++) {
                                 if (elementValue.includes(elementKeys[index])) {
@@ -151,7 +153,7 @@ $(function () {
                 });
             });
 
-
+            console.log ($(x).attr("aria-label"));
 
 
         }, 10);
