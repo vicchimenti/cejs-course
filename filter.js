@@ -10,7 +10,7 @@
 *   This script searches the Law School faculty profile content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 3.5
+*   @version 3.6
 */
 
 
@@ -32,7 +32,7 @@ $(function () {
             //   ***   Process and Parse Visible Items   ***   //
             $(function () {
                 let parseItemsToDisplay = function () {
-                    visibleItems = $('.cejscourseWrapper').not('.hideByText, .hideBySchool, .hideByLevel');
+                    visibleItems = $('.cejscourseWrapper').not('.hideByText, .hideBySchool, .hideByLevel, .hideByGoal');
                     
                     if (visibleItems.length == 0) {
                         $('.noResultsToShow').removeClass('hideResultsMessage');
