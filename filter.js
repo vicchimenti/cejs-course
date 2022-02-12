@@ -125,6 +125,35 @@ $(function () {
 
 
 
+
+            //   ***  Ignatian Element Multi-Select Checkbox Filter    ***   //
+            $(function () {
+                $('#SelectBox-ByElement').change(function () {
+                    let elementKeys = [];
+                    elementKeys[0] = 'Any';
+                    $('input[name=SelectBox-ByElement]:checked').each(function (item) {
+                        elementKeys[item] = $(this).val();
+                    });
+                    if (elementKeys[0] != "Any") {
+                        $('div.pedagogy ul.categories').filter(function (i, e) {
+                            let elementValue = $(this).text();
+                            $(this).parents('.ignatianArticle').addClass('hideByElement');
+                            for (let index = 0; index < elementKeys.length; index++) {
+                                if (elementValue.includes(elementKeys[index])) {
+                                    $(this).parents('.ignatianArticle').removeClass('hideByElement');
+                                }
+                            }
+                        });
+                    } else {
+                        $('.ignatianArticle').removeClass('hideByElement');
+                    }
+                    parseItems.process();
+                });
+            });
+
+
+
+
         }, 10);
     });
 });
