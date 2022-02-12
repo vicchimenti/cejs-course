@@ -78,9 +78,8 @@ $(function () {
 
 
 
-            //   ***   Type Filter   ***   //
+            //   ***   School Filter   ***   //
             $(function () {
-                // When the Dropdown Menu Selector Course Types Change - Execute change function
                 $('form input:radio').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
@@ -88,19 +87,19 @@ $(function () {
                     console.log("typeKey: " + typeKey);
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey != viewAll) {
-                        $('.facultyStatus').filter(function (i, e) {
+                        $('.college').filter(function (i, e) {
                             var typeValue = $(this).text();
                             console.log("typeValue: " + typeValue);
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.cejscourseWrapper').removeClass('hideByType');
+                                $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
                             } else {
-                                $(this).parents('.cejscourseWrapper').addClass('hideByType');
+                                $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.cejscourseWrapper').removeClass('hideByType');
+                        $('.cejscourseWrapper').removeClass('hideBySchool');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
