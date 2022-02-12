@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.1
+     *     @version 8.1.2
      */
 
 
@@ -109,8 +109,10 @@
         let info = new ImageInfo;
         info.setInput(media);
 
+        let targetClass = mediaInfo.getName().replace(/\s/g, '-') || '';
+
         let mediaHTML = (info.check())
-                        ? '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>'
+                        ? '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid ' + targetClass + '" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>'
                         : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
 
         return mediaHTML;
