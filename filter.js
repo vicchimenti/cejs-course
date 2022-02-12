@@ -136,7 +136,7 @@ $(function () {
                     });
                     if (elementKeys[0] != "Any") {
                         let target =  $("img.listgroupImage");
-                        $('.cejscourseWrapper ul.iconDashboard').filter(function (i, e) {
+                        $('.cejscourseWrapper ul.iconDashboard li').filter(function (i, e) {
                             console.log("iconDashboard");
 
                             let elementValue = $(target).attr("aria-label");
