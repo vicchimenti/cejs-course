@@ -18,3 +18,8 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
 .hideResultsMessage {
     display: none;
 }
+
+
+form#articleFilter {
+    margin-top: 1rem;
+}
