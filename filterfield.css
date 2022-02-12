@@ -20,6 +20,9 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
 }
 
 
-form#articleFilter {
-    margin-top: 1rem;
+@media screen and (max-width: 991.98px) {
+    
+    form#articleFilter {
+        margin-top: 1rem;
+    }
 }
