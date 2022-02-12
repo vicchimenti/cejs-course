@@ -101,11 +101,9 @@ $(function () {
                 $('#SelectBox-ByLevel input:radio').change(function () {
                     let typeKey = $(this).val();
                     let viewAll = "All";
-                    console.log("typeKey: " + typeKey);
                     if (typeKey != viewAll) {
                         $('.academicLevel').filter(function (i, e) {
                             var typeValue = $(this).text();
-                            console.log("typeValue: " + typeValue);
 
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.cejscourseWrapper').removeClass('hideByLevel');
@@ -128,16 +126,20 @@ $(function () {
 
             //   ***  Ignatian Element Multi-Select Checkbox Filter    ***   //
             $(function () {
-                $('#SelectBox-ByElement').change(function () {
+                $('#SelectBox-ByGoal').change(function () {
                     let elementKeys = [];
                     elementKeys[0] = 'Any';
-                    $('input[name=SelectBox-ByElement]:checked').each(function (item) {
+                    $('input[name=SelectBox-ByGoal]:checked').each(function (item) {
                         elementKeys[item] = $(this).val();
+                        console.log("typeKey: " + elementKeys[item]);
+
                     });
                     if (elementKeys[0] != "Any") {
                         let target =  $("img.listgroupImage");
                         $('SelectBox-ByGoal ul.iconDashboard').filter(function (i, e) {
                             let elementValue = $(target).attr("aria-label");
+                            console.log("elementValue: " + elementValue);
+
                             // let elementValue = $(this).text();
                             $(this).parents('.cejscourseWrapper').addClass('hideByGoal');
                             for (let index = 0; index < elementKeys.length; index++) {
