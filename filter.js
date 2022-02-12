@@ -3,26 +3,28 @@
 
 
 /***
- *   @author Victor Chimenti, MSCS-SE '20
- *   @file article-filter.js
- *
- *   jQuery
- *   This script searches the Career Engagement Article content items for matches to the
- *   user selected search parameters in the filter field dropdown menus
- *
- *   @version 2.3
- */
+*   @author Victor Chimenti, MSCS-SE
+*   @file profile-filter.js
+*
+*   jQuery
+*   This script searches the Law School faculty profile content items for matches to the
+*   user selected search parameters in the filter field dropdown menus
+*
+*   @version 3.0
+*/
 
 
 
 
 
 
-$(function() {
+$(function () {
     // After the DOM is ready, Wait until the window loads
-    $(window).load(function() {
+    $(window).load(function () {
         // Once window loads set a timeout delay
-        setTimeout(function() {
+        setTimeout(function () {
+            console.log("timeout function");
+
 
 
 
@@ -35,10 +37,10 @@ $(function() {
 
 
             //   ***   Process and Parse Visible Items   ***   //
-            $(function() {
-                let parseItemsToDisplay = function() {
+            $(function () {
+                let parseItemsToDisplay = function () {
                     // assign array of currently visible content items
-                    visibleItems = $('.newsItemWrapper').not('.hideByText, .hideByType');
+                    visibleItems = $('.lawFacultyWrapper').not('.hideByText, .hideByType');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -55,14 +57,14 @@ $(function() {
 
 
             //   ***   Keyword Search   ***   //
-            $(function() {
+            $(function () {
                 // scan the keyword each character the user inputs
-                $('#keystroke_filter').on('keyup', function() {
+                $('#keystroke_filter').on('keyup', function () {
                     // Assign Search Key
                     let keyword = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
-                    $(function() {
-                        $('.newsItemWrapper').filter(function() {
+                    $(function () {
+                        $('.lawFacultyWrapper').filter(function () {
                             // when the search key is not present in the item then hide the item
                             $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
@@ -77,32 +79,28 @@ $(function() {
 
 
             //   ***   Type Filter   ***   //
-            $(function() {
-                // When the Multi-Select Checkbox Selector for Article Topics Changes - Execute change function 
-                $('#SelectBox-ByType').change(function() {
-                    // initialize an array of keys to hold each check box selected
-                    let typeKeys = [];
-                    typeKeys[0] = -1;
-                    $('input[name=SelectBox-ByType]:checked').each(function(item) {
-                        typeKeys[item] = $(this).val();
-                    });
-                    // If Search Key array has at least one valid value then Compare to the Each Content Item in term
-                    if (typeKeys[0] != -1) {
-                        $('.topics').filter(function(i, e) {
-                            let typeValue = $(this).text();
-                            // set state to hidden for all items
-                            $(this).parents('.newsItemWrapper').addClass('hideByType');
-                            // Check to see if any Key is included in the current Value
-                            for (let index = 0; index < typeKeys.length; index++) {
-                                if (typeValue.includes(typeKeys[index])) {
-                                    // make current item visible when we validate a match
-                                    $(this).parents('.newsItemWrapper').removeClass('hideByType');
-                                }
+            $(function () {
+                // When the Dropdown Menu Selector Course Types Change - Execute change function
+                $('form input:radio').change(function () {
+                    // Assign Search Key
+                    let typeKey = $(this).val();
+                    let viewAll = "All";
+                    console.log("typeKey: " + typeKey);
+                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
+                    if (typeKey != viewAll) {
+                        $('.facultyStatus').filter(function (i, e) {
+                            var typeValue = $(this).text();
+                            console.log("typeValue: " + typeValue);
+                            // Check to see if the Key and Value are a Match
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.lawFacultyWrapper').removeClass('hideByType');
+                            } else {
+                                $(this).parents('.lawFacultyWrapper').addClass('hideByType');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.newsItemWrapper').removeClass('hideByType');
+                        $('.lawFacultyWrapper').removeClass('hideByType');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
