@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.5
+     *     @version 8.1.6
      */
 
 
@@ -350,7 +350,7 @@
       * */
     if (cejscDict.icons.content) {
         let mediaTitles = wrapperTargets(cejscDict.icons.content);
-        beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3 ' + mediaTitles + '" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
+        beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 ' + mediaTitles + 'mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
     }
 
 
