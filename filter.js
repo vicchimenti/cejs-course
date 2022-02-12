@@ -137,6 +137,8 @@ $(function () {
                     if (elementKeys[0] != "Any") {
                         let target =  $("img.listgroupImage");
                         $('SelectBox-ByGoal ul.iconDashboard').filter(function (i, e) {
+                            console.log("iconDashboard");
+
                             let elementValue = $(target).attr("aria-label");
                             console.log("elementValue: " + elementValue);
 
