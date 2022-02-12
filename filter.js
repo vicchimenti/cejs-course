@@ -68,7 +68,7 @@ $(function () {
 
             //   ***   School Filter   ***   //
             $(function () {
-                $('form input:radio').change(function () {
+                $('#SelectBox-BySchool input:radio').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     let viewAll = "All";
