@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.9
+     *     @version 8.1.10
      */
 
 
@@ -216,7 +216,7 @@
          primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
          subjectDescription: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
          icons: getContentValues('<t4 type="content" name="Icon ID" output="normal" modifiers="striptags,htmlentities" />'),
-         summaryDescription: getContentValues('<t4 type="content" name="Meta Description" output="normal" modifiers="striptags,htmlentities" />'),
+         summaryDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="medialibrary,nav_sections,striptags" />'),
          courseDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="medialibrary,nav_sections,htmlentities" />'),
          fullTextLink: getContentValues('<t4 type="content" name="Article Title" output="fulltext" use-element="true" filename-element="Article Title" modifiers="striptags,htmlentities" />'),
          contentId: getContentValues('<t4 type="meta" meta="content_id" />')
@@ -259,6 +259,7 @@
       *  check for summary Description
       * 
       * */
+    let summarySubString = ()
     let summaryString = (cejscDict.subjectDescription.content && cejscDict.articleTitle.content)
                         ? '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>'
                         : '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
