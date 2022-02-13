@@ -32,15 +32,7 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
 
 
 
-#SelectBox-ByGoal label {
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+
   
   /* #SelectBox-ByGoal label::before {
     background-color: white;
@@ -59,6 +51,26 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     transition-duration: 0.4s;
     transform: scale(0);
   } */
+
+    /* #SelectBox-ByGoal :checked+label::before {
+    content: "✓";
+    background-color: grey;
+    transform: scale(1);
+  } */
+
+  #SelectBox-ByGoal label {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  #SelectBox-ByGoal :checked+label {
+    border-color: #ddd;
+  }
   
   #SelectBox-ByGoal label img {
     height: 100px;
@@ -67,18 +79,34 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     transform-origin: 50% 50%;
     width: 100px;
   }
-  
-  #SelectBox-ByGoal :checked+label {
-    border-color: #ddd;
-  }
-  
-  /* #SelectBox-ByGoal :checked+label::before {
-    content: "✓";
-    background-color: grey;
-    transform: scale(1);
-  } */
+
   
   #SelectBox-ByGoal :checked+label img {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px #333;
+    z-index: -1;
+  }
+
+
+  #SelectBox-BySchool label {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+  #SelectBox-BySchool label {
+    padding: 0;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+  }
+
+  
+  #SelectBox-BySchool :checked+label {
     transform: scale(0.9);
     box-shadow: 0 0 5px #333;
     z-index: -1;
