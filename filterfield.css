@@ -88,7 +88,7 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
   }
 
 
-  #SelectBox-BySchool label {
+  /* #SelectBox-BySchool label {
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -135,4 +135,4 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     transform: scale(0.9);
     box-shadow: 0 0 5px #333;
     z-index: -1;
-  }
+  } */
