@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.10
+     *     @version 8.1.11
      */
 
 
@@ -259,9 +259,12 @@
       *  check for summary Description
       * 
       * */
-    let summarySubString = ()
-    let summaryString = (cejscDict.subjectDescription.content && cejscDict.articleTitle.content)
-                        ? '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>'
+    let summarySubString =  (cejscDict.summaryDescription.content)
+                            ? cejscDict.summaryDescription.content.substring(0, summaryLength)
+                            : null;
+    
+    let summaryString = (summarySubString && cejscDict.articleTitle.content)
+                        ? '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>'
                         : '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
 
 
