@@ -7,10 +7,43 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     display: none;
 }
 
+#articleFilter .form-check label {
+  display: inline;
+  overflow-wrap: anywhere;
+}
+  
+#SelectBox-ByGoal label {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#SelectBox-ByGoal :checked+label {
+  border-color: #ddd;
+}
+
+#SelectBox-ByGoal label img {
+  height: 100px;
+  padding: 0;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+  width: 100px;
+}
+
+#SelectBox-ByGoal :checked+label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
 .noResultsToShow {
-    background: #e3e3da;
-    padding: 30px;
-    margin: 15px;
+  background: #e3e3da;
+  padding: 30px;
+  margin: 15px;
 }
 
 .hideByText,
@@ -21,126 +54,9 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     display: none;
 }
 
-
 @media screen and (max-width: 991.98px) {
     
     form#articleFilter {
         margin-top: 1rem;
     }
 }
-
-
-
-
-
-  
-  /* #SelectBox-ByGoal label::before {
-    background-color: white;
-    color: white;
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    border: 1px solid grey;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 28px;
-    transition-duration: 0.4s;
-    transform: scale(0);
-  } */
-
-    /* #SelectBox-ByGoal :checked+label::before {
-    content: "✓";
-    background-color: grey;
-    transform: scale(1);
-  } */
-
-  /* .form-check-input label */
-
-#articleFilter .form-check {
-  overflow-wrap: anywhere;
-}
-  
-
-
-  #SelectBox-ByGoal label {
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  #SelectBox-ByGoal :checked+label {
-    border-color: #ddd;
-  }
-  
-  #SelectBox-ByGoal label img {
-    height: 100px;
-    padding: 0;
-    transition-duration: 0.2s;
-    transform-origin: 50% 50%;
-    width: 100px;
-  }
-
-  
-  #SelectBox-ByGoal :checked+label img {
-    transform: scale(0.9);
-    box-shadow: 0 0 5px #333;
-    z-index: -1;
-  }
-
-
-  /* #SelectBox-BySchool label {
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-
-  #SelectBox-BySchool label {
-    padding: 0;
-    transition-duration: 0.2s;
-    transform-origin: 50% 50%;
-  }
-
-  
-  #SelectBox-BySchool :checked+label {
-    transform: scale(0.9);
-    box-shadow: 0 0 5px #333;
-    z-index: -1;
-  }
-
-
-  #SelectBox-ByLevel label {
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-
-  #SelectBox-ByLevel label {
-    padding: 0;
-    transition-duration: 0.2s;
-    transform-origin: 50% 50%;
-  }
-
-  
-  #SelectBox-ByLevel :checked+label {
-    transform: scale(0.9);
-    box-shadow: 0 0 5px #333;
-    z-index: -1;
-  } */
