@@ -33,11 +33,6 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
 
 
 #SelectBox-ByGoal label {
-    border: 1px solid #fff;
-    padding: 10px;
-    display: block;
-    position: relative;
-    margin: 10px;
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -47,7 +42,7 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     user-select: none;
   }
   
-  #SelectBox-ByGoal label::before {
+  /* #SelectBox-ByGoal label::before {
     background-color: white;
     color: white;
     content: " ";
@@ -63,24 +58,25 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     line-height: 28px;
     transition-duration: 0.4s;
     transform: scale(0);
-  }
+  } */
   
   #SelectBox-ByGoal label img {
     height: 100px;
-    width: 100px;
+    padding: 0;
     transition-duration: 0.2s;
     transform-origin: 50% 50%;
+    width: 100px;
   }
   
   #SelectBox-ByGoal :checked+label {
     border-color: #ddd;
   }
   
-  #SelectBox-ByGoal :checked+label::before {
+  /* #SelectBox-ByGoal :checked+label::before {
     content: "✓";
     background-color: grey;
     transform: scale(1);
-  }
+  } */
   
   #SelectBox-ByGoal :checked+label img {
     transform: scale(0.9);
