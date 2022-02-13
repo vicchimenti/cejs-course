@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.11
+     *     @version 8.1.12
      */
 
 
@@ -259,8 +259,10 @@
       *  check for summary Description
       * 
       * */
-    let summarySubString =  (cejscDict.summaryDescription.content)
+    let summarySubString =  (cejscDict.summaryDescription.content && (cejscDict.summaryDescription.content.length > 200))
                             ? cejscDict.summaryDescription.content.substring(0, summaryLength)
+                            : (cejscDict.summaryDescription.content)
+                            ? cejscDict.summaryDescription.content
                             : null;
     
     let summaryString = (summarySubString && cejscDict.articleTitle.content)
