@@ -229,6 +229,7 @@
       *  default html initializations
       * 
       * */
+      let summaryLength = 200;
       let endingHTML = '</article>';
       let openCardHeader = '<div class="card-header">';
       let closeCardHeader = '</div>'
