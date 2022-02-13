@@ -58,6 +58,14 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     transform: scale(1);
   } */
 
+  /* .form-check-input label */
+
+#articleFilter .form-check {
+  overflow-wrap: anywhere;
+}
+  
+
+
   #SelectBox-ByGoal label {
     cursor: pointer;
     -webkit-touch-callout: none;
