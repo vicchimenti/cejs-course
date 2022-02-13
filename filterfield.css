@@ -111,3 +111,28 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
     box-shadow: 0 0 5px #333;
     z-index: -1;
   }
+
+
+  #SelectBox-ByLevel label {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+  #SelectBox-ByLevel label {
+    padding: 0;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+  }
+
+  
+  #SelectBox-ByLevel :checked+label {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px #333;
+    z-index: -1;
+  }
