@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.13
+     *     @version 8.1.14
      */
 
 
@@ -260,11 +260,11 @@
       * 
       * */
     let descriptionLength = (cejscDict.summaryDescription.content) ? cejscDict.summaryDescription.content.length : null
-    let summarySubString =  (descriptionLength > 200)
-                            ? cejscDict.summaryDescription.content.substring(0, summaryLength)
-                            : (cejscDict.summaryDescription.content)
+    let summarySubString =  (descriptionLength < 200)
                             ? cejscDict.summaryDescription.content
-                            : null;
+                            : (descriptionLength < summaryLength)
+                            ? cejscDict.summaryDescription.content.substring(0, descriptionLength)
+                            : cejscDict.summaryDescription.content.substring(0, summaryLength);
     
     let summaryString = (summarySubString && cejscDict.articleTitle.content)
                         ? '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>'
