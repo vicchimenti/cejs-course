@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5
+     *     @version 8.5.1
      */
 
 
@@ -223,9 +223,9 @@
  
          };
  
-         let plainDescription = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Plaintext Description" output="normal" modifiers="striptags,htmlentities" />');
 
- 
+
+         
          /***
           *  default html initializations
           * 
@@ -240,8 +240,7 @@
  
  
  
- 
- 
+  
          /***
           *  check for fulltext content
           * 
@@ -359,8 +358,7 @@
  
  
  
- 
- 
+  
          /***
           *  Parse for media item titles and add to wrapper classes for isotope search engine
           * 
@@ -372,8 +370,7 @@
  
  
  
- 
- 
+  
          /***
           *  write document once
           * 
