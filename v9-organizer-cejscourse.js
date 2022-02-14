@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.2.6
+     *     @version 8.3
      */
 
 
@@ -223,7 +223,8 @@
  
          };
  
- 
+         let plainDescription = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Plaintext Description" output="normal" modifiers="striptags,htmlentities" />');
+
  
          /***
           *  default html initializations
@@ -259,11 +260,11 @@
           * */
          let maxLength = 200;
         //  let summaryString = (cejscDict.summaryDescription.content) ? JSON.stringify(cejscDict.summaryDescription.content) : null;
-         let actualLength = (cejscDict.summaryDescription.content) ? cejscDict.summaryDescription.content.length : null;
-         let summarySubstring = (cejscDict.summaryDescription.content && actualLength && actualLength > maxLength)
-                                ? cejscDict.summaryDescription.content.substring(0, maxLength)
-                                : (cejscDict.summaryDescription.content && actualLength && actualLength <= maxLength)
-                                ? cejscDict.summaryDescription.content.substring(0, actualLength)
+         let actualLength = (plainDescription != '') ? plainDescription.length : null;
+         let summarySubstring = (plainDescription != '' && actualLength && actualLength > maxLength)
+                                ? plainDescription.substring(0, maxLength)
+                                : (plainDescription != '' && actualLength && actualLength <= maxLength)
+                                ? plainDescription.substring(0, actualLength)
                                 : null;
                                 
                                 
