@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.3
+     *     @version 8.4
      */
 
 
@@ -259,12 +259,14 @@
           * 
           * */
          let maxLength = 200;
+         let plainString = (plainDescription != '') ? '' + plainDescription +  '' : null;
+
         //  let summaryString = (cejscDict.summaryDescription.content) ? JSON.stringify(cejscDict.summaryDescription.content) : null;
-         let actualLength = (plainDescription != '') ? plainDescription.length : null;
-         let summarySubstring = (plainDescription != '' && actualLength && actualLength > maxLength)
-                                ? plainDescription.substring(0, maxLength)
-                                : (plainDescription != '' && actualLength && actualLength <= maxLength)
-                                ? plainDescription.substring(0, actualLength)
+         let actualLength = (plainString) ? plainString.length : null;
+         let summarySubstring = (plainString && actualLength && actualLength > maxLength)
+                                ? plainString.substring(0, maxLength)
+                                : (plainString && actualLength && actualLength <= maxLength)
+                                ? plainString.substring(0, actualLength)
                                 : null;
                                 
                                 
