@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.2
+     *     @version 8.2.1
      */
 
 
@@ -258,44 +258,10 @@
           *  check for summary Description
           * 
           * */
- 
- 
-         let summaryString = (cejscDict.summaryDescription.content) ?
-             '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>' :
-             '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
-         // let summaryLength = 200;
-         // let summarySubString = '';
- 
- 
-         // if (cejscDict.summaryDescription.content) {
- 
-         //     let descriptionString = cejscDict.summaryDescription.content.toString();
- 
-         //     let descriptionLength = descriptionString.length;
- 
- 
-         //     if (descriptionLength < summaryLength) {
- 
-         //         summarySubString = cejscDict.summaryDescription.content.substring(0, descriptionLength);
- 
-         //     } else {
- 
-         //         summarySubString = cejscDict.summaryDescription.content.substring(0, summaryLength);
- 
-         //     }
- 
-         //     if (cejscDict.articleTitle.content) {
- 
-         //         summaryString = '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>';
- 
-         //     } else {
- 
-         //         summaryString = '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>';
- 
-         //     }
- 
-         // }
- 
+         let summaryString =    (cejscDict.summaryDescription.content)
+                                ? '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>'
+                                : '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
+
  
  
  
