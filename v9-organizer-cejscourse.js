@@ -259,7 +259,7 @@
           * */
          let maxLength = 200;
         //  let summaryString = (cejscDict.summaryDescription.content) ? JSON.stringify(cejscDict.summaryDescription.content) : null;
-         let actualLength = (cejscDict.summaryDescription.content) ? summaryString.length : null;
+         let actualLength = (cejscDict.summaryDescription.content) ? cejscDict.summaryDescription.content.length : null;
          let summarySubstring = (cejscDict.summaryDescription.content && actualLength && actualLength > maxLength)
                                 ? cejscDict.summaryDescription.content.substring(0, maxLength)
                                 : (cejscDict.summaryDescription.content && actualLength && actualLength <= maxLength)
