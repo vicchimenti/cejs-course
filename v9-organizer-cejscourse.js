@@ -258,12 +258,21 @@
          *  check for summary Description
          * 
          * */
+        let summaryLength = 200;
+        let descriptionArr = (cejscDict.summaryDescription.content) ? Object.values(cejscDict.summaryDescription.content) : null;
+        let descriptionLength = (descriptionArr[0]) ? descriptionArr[0].length : null;
 
 
-        let summaryString = (cejscDict.summaryDescription.content) ?
-            '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>' :
-            '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
-        // let summaryLength = 200;
+        let summaryString = (cejscDict.summaryDescription.content && descriptionLength && (descriptionLength < summaryLength))
+                            ? cejscDict.summaryDescription.content.substring(0, descriptionLength)
+                            : (cejscDict.summaryDescription.content && descriptionLength && (descriptionLength < summaryLength))
+                            ? cejscDict.summaryDescription.content.substring(0, descriptionLength)
+                            : '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
+
+
+                            
+            // '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>' :
+            // '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
         // let summarySubString = '';
 
 
