@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.4
+     *     @version 8.5
      */
 
 
@@ -254,14 +254,14 @@
  
  
  
+
          /***
-          *  check for summary Description
+          *  check for summaryDescription
+          *  find string length and truncate
           * 
           * */
          let maxLength = 200;
-         let plainString = (plainDescription != '') ? '' + plainDescription +  '' : null;
-
-        //  let summaryString = (cejscDict.summaryDescription.content) ? JSON.stringify(cejscDict.summaryDescription.content) : null;
+         let plainString = (cejscDict.summaryDescription.content) ? '' + cejscDict.summaryDescription.content +  '' : null;
          let actualLength = (plainString) ? plainString.length : null;
          let summarySubstring = (plainString && actualLength && actualLength > maxLength)
                                 ? plainString.substring(0, maxLength)
