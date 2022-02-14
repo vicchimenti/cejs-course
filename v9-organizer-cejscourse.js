@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.12
+     *     @version 8.1.13
      */
 
 
@@ -229,7 +229,7 @@
       *  default html initializations
       * 
       * */
-      let summaryLength = 200;
+      let summaryLength = 150;
       let endingHTML = '</article>';
       let openCardHeader = '<div class="card-header">';
       let closeCardHeader = '</div>'
@@ -259,7 +259,8 @@
       *  check for summary Description
       * 
       * */
-    let summarySubString =  (cejscDict.summaryDescription.content && (cejscDict.summaryDescription.content.length > 200))
+    let descriptionLength = (cejscDict.summaryDescription.content) ? cejscDict.summaryDescription.content.length : null
+    let summarySubString =  (descriptionLength > 200)
                             ? cejscDict.summaryDescription.content.substring(0, summaryLength)
                             : (cejscDict.summaryDescription.content)
                             ? cejscDict.summaryDescription.content
