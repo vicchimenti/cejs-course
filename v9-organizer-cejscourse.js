@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.18
+     *     @version 8.1.21
      */
 
 
@@ -258,35 +258,43 @@
          *  check for summary Description
          * 
          * */
-        let summaryString = '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
-        let summaryLength = 200;
-        let summarySubString = '';
 
 
-        if (cejscDict.summaryDescription.content) {
+        let summaryString = (cejscDict.summaryDescription.content) ?
+            '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>' :
+            '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
+        // let summaryLength = 200;
+        // let summarySubString = '';
 
 
-            if (cejscDict.summaryDescription.content.length < summaryLength) {
+        // if (cejscDict.summaryDescription.content) {
 
-                summarySubString = cejscDict.summaryDescription.content.substring(0, cejscDict.summaryDescription.content.length);
+        //     let descriptionString = cejscDict.summaryDescription.content.toString();
 
-            } else {
+        //     let descriptionLength = descriptionString.length;
 
-                summarySubString = cejscDict.summaryDescription.content.substring(0, summaryLength);
 
-            }
+        //     if (descriptionLength < summaryLength) {
 
-            if (cejscDict.articleTitle.content) {
+        //         summarySubString = cejscDict.summaryDescription.content.substring(0, descriptionLength);
 
-                summaryString = '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>';
+        //     } else {
 
-            } else {
+        //         summarySubString = cejscDict.summaryDescription.content.substring(0, summaryLength);
 
-                summaryString = '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>';
+        //     }
 
-            }
+        //     if (cejscDict.articleTitle.content) {
 
-        }
+        //         summaryString = '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>';
+
+        //     } else {
+
+        //         summaryString = '<p class="card-text shortSummary">' + summarySubString + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>';
+
+        //     }
+
+        // }
 
 
 
