@@ -260,9 +260,9 @@
       * 
       * */
     let descriptionLength = (cejscDict.summaryDescription.content) ? cejscDict.summaryDescription.content.length : null
-    let summarySubString =  (descriptionLength < 200)
+    let summarySubString =  (descriptionLength <= 200)
                             ? cejscDict.summaryDescription.content
-                            : (descriptionLength < summaryLength)
+                            : (descriptionLength <= summaryLength)
                             ? cejscDict.summaryDescription.content.substring(0, descriptionLength)
                             : cejscDict.summaryDescription.content.substring(0, summaryLength);
     
