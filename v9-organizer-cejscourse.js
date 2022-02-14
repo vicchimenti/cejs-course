@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.17
+     *     @version 8.1.18
      */
 
 
@@ -260,9 +260,7 @@
          * */
         let summaryString = '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
         let summaryLength = 200;
-        let summarySubString = (cejscDict.summaryDescription.content) ?
-            cejscDict.summaryDescription.content.substring(0, cejscDict.summaryDescription.content.length) :
-            '';
+        let summarySubString = '';
 
 
         if (cejscDict.summaryDescription.content) {
