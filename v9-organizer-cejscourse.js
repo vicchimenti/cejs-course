@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.1.21
+     *     @version 8.1.22
      */
 
 
@@ -263,14 +263,14 @@
         let descriptionLength = (descriptionArr[0]) ? descriptionArr[0].length : null;
 
 
-        let summaryString = (cejscDict.summaryDescription.content && descriptionLength && (descriptionLength < summaryLength))
+        let summaryString = (cejscDict.summaryDescription.content && descriptionLength && (descriptionLength <= summaryLength))
                             ? cejscDict.summaryDescription.content.substring(0, descriptionLength)
-                            : (cejscDict.summaryDescription.content && descriptionLength && (descriptionLength < summaryLength))
-                            ? cejscDict.summaryDescription.content.substring(0, descriptionLength)
+                            : (cejscDict.summaryDescription.content && descriptionLength && (descriptionLength > summaryLength))
+                            ? cejscDict.summaryDescription.content.substring(0, summaryLength)
                             : '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
 
 
-                            
+
             // '<p class="card-text shortSummary">' + cejscDict.summaryDescription.content + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.contentName.content + '">Read More</a></p>' :
             // '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
         // let summarySubString = '';
