@@ -260,18 +260,21 @@
          * */
         let summaryString = '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
         let summaryLength = 200;
-        let summarySubstring = '';
+        let summarySubString = (cejscDict.summaryDescription.content) ?
+            cejscDict.summaryDescription.content.substring(0, cejscDict.summaryDescription.content.length) :
+            '';
+
 
         if (cejscDict.summaryDescription.content) {
 
 
             if (cejscDict.summaryDescription.content.length < summaryLength) {
 
-                summarySubstring = cejscDict.summaryDescription.content.substring(0, cejscDict.summaryDescription.content.length);
+                summarySubString = cejscDict.summaryDescription.content.substring(0, cejscDict.summaryDescription.content.length);
 
             } else {
 
-                summarySubstring = cejscDict.summaryDescription.content.substring(0, summaryLength);
+                summarySubString = cejscDict.summaryDescription.content.substring(0, summaryLength);
 
             }
 
