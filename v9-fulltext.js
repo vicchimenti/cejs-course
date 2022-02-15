@@ -170,13 +170,13 @@ function assignList(arrayOfValues) {
       * */
       let beginningHTML = '<article class="cejscourseItem standardContent card" id="cejscourse' + cejscDict.contentId.content + 'fulltext" aria-label="' + cejscDict.articleTitle.content + '">';
       let endingHTML = '</article>';
-      let openHeaderWrapper = '<div class="col-12 card-header">';
+      let openHeaderWrapper = '<div class="col-12 card-header border-0 bg-0">';
       let closeHeaderWrapper = '</div>';
       let openRow = '<div class="row g-0 noGap">';
       let closeRow = '</div>';
       let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
       let closeBodyWrapper = '</div>';
-      let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none"><p class="card-text courseDescription">';
+      let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none">';
       let closeFooter = '</div>';
       let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
  
