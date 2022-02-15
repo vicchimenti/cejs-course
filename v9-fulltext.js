@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.5.3
+ *     @version 7.5.4
  */
 
 
@@ -272,15 +272,26 @@ function assignList(arrayOfValues) {
                                 : '<p class="card-text sectionName visually-hidden hidden">No valid section name provided</p>';
 
 
-
+                                
 
     /***
       *  check for section name
       * 
       * */
       let sectionIdString = (cejscDict.sectionId.content)
-                            ? '<p class="card-text sectionId"><strong>Section Name: </strong>' + cejscDict.sectionId.content + '</p>'
+                            ? '<p class="card-text sectionId"><strong>Section ID: </strong>' + cejscDict.sectionId.content + '</p>'
                             : '<p class="card-text sectionId visually-hidden hidden">No valid section ID provided</p>';
+
+
+
+
+    /***
+      *  check for section name
+      * 
+      * */
+      let focusedString =   (cejscDict.sustainabilityFocused.content)
+                            ? '<p class="card-text sustainabilityFocused"><strong>Sustainability Focused: </strong>' + cejscDict.sustainabilityFocused.content + '</p>'
+                            : '<p class="card-text sustainabilityFocused visually-hidden hidden">No valid focus property provided</p>';
 
 
 
@@ -335,6 +346,7 @@ function assignList(arrayOfValues) {
             primaryNameString,
             sectionNameString,
             sectionIdString,
+            focusedString,
             closeBodyWrapper,
             openFooter,
             descriptionString,
