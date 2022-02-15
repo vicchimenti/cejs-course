@@ -231,7 +231,7 @@
           * 
           * */
          let endingHTML = '</article>';
-         let openCardHeader = '<div class="card-header border-0 bg-0">';
+         let openCardHeader = '<div class="card-header border-0 bg-transparent">';
          let closeCardHeader = '</div>'
          let openBodyWrapper = '<div class="articleSummary card-body">';
          let closeBodyWrapper = '</div>';
