@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.5.4
+ *     @version 7.5.5
  */
 
 
@@ -153,6 +153,7 @@ function assignList(arrayOfValues) {
         primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
         sectionName: getContentValues('<t4 type="content" name="Section Name" output="normal" modifiers="striptags,htmlentities" />'),
         sectionId: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionStatus: getContentValues('<t4 type="content" name="Section Current Status" output="normal" modifiers="striptags,htmlentities" />'),
         sustainabilityFocused: getContentValues('<t4 type="content" name="Focused" output="normal" modifiers="striptags,htmlentities" />'),
         sustainabilityInclusive: getContentValues('<t4 type="content" name="Inclusive" output="normal" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />'),
