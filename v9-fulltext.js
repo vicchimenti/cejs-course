@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.5.1
+ *     @version 7.5.2
  */
 
 
@@ -269,7 +269,18 @@ function assignList(arrayOfValues) {
       * */
       let sectionNameString =   (cejscDict.sectionName.content)
                                 ? '<p class="card-text sectionName"><strong>Section Name: </strong>' + cejscDict.sectionName.content + '</p>'
-                                : '<p class="card-text sectionName visually-hidden hidden">No valid primary section name provided</p>';
+                                : '<p class="card-text sectionName visually-hidden hidden">No valid section name provided</p>';
+
+
+
+
+    /***
+      *  check for section name
+      * 
+      * */
+      let sectionStatusString = (cejscDict.sectionStatus.content)
+                                ? '<p class="card-text sectionStatus"><strong>Section Name: </strong>' + cejscDict.sectionStatus.content + '</p>'
+                                : '<p class="card-text sectionStatus visually-hidden hidden">No valid section status provided</p>';
 
 
 
@@ -290,7 +301,7 @@ function assignList(arrayOfValues) {
 
         let iconValues = assignList(iconPathArray);
         listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
-    } 
+    }
  
 
 
@@ -306,16 +317,7 @@ function assignList(arrayOfValues) {
 
      
 
-
- 
- 
- 
- 
-
- 
- 
- 
- 
+    
      /***
       *  write document once
       * 
@@ -332,6 +334,7 @@ function assignList(arrayOfValues) {
             listOfIcons,
             primaryNameString,
             sectionNameString,
+            sectionStatusString,
             closeBodyWrapper,
             openFooter,
             descriptionString,
