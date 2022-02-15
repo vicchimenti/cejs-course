@@ -275,7 +275,7 @@ function assignList(arrayOfValues) {
                                 
 
     /***
-      *  check for section name
+      *  check for section id
       * 
       * */
       let sectionIdString = (cejscDict.sectionId.content)
@@ -286,12 +286,23 @@ function assignList(arrayOfValues) {
 
 
     /***
-      *  check for section name
+      *  check sustainability focused
       * 
       * */
       let focusedString =   (cejscDict.sustainabilityFocused.content)
                             ? '<p class="card-text sustainabilityFocused"><strong>Sustainability Focused: </strong>' + cejscDict.sustainabilityFocused.content + '</p>'
                             : '<p class="card-text sustainabilityFocused visually-hidden hidden">No valid focus property provided</p>';
+
+
+
+
+    /***
+      *  check sustainability focused
+      * 
+      * */
+      let inclusiveString = (cejscDict.sustainabilityInclusive.content)
+                            ? '<p class="card-text sustainabilityInclusive"><strong>Sustainability Inclusive: </strong>' + cejscDict.sustainabilityInclusive.content + '</p>'
+                            : '<p class="card-text sustainabilityInclusive visually-hidden hidden">No valid inclusive property provided</p>';
 
 
 
@@ -347,6 +358,7 @@ function assignList(arrayOfValues) {
             sectionNameString,
             sectionIdString,
             focusedString,
+            inclusiveString,
             closeBodyWrapper,
             openFooter,
             descriptionString,
