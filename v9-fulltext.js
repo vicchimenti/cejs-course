@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.5.2
+ *     @version 7.5.3
  */
 
 
@@ -152,7 +152,7 @@ function assignList(arrayOfValues) {
         courseDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="medialibrary,nav_sections" />'),
         primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
         sectionName: getContentValues('<t4 type="content" name="Section Name" output="normal" modifiers="striptags,htmlentities" />'),
-        sectionStatus: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
+        sectionId: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
         sustainabilityFocused: getContentValues('<t4 type="content" name="Focused" output="normal" modifiers="striptags,htmlentities" />'),
         sustainabilityInclusive: getContentValues('<t4 type="content" name="Inclusive" output="normal" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />'),
@@ -278,9 +278,9 @@ function assignList(arrayOfValues) {
       *  check for section name
       * 
       * */
-      let sectionStatusString = (cejscDict.sectionStatus.content)
-                                ? '<p class="card-text sectionStatus"><strong>Section Name: </strong>' + cejscDict.sectionStatus.content + '</p>'
-                                : '<p class="card-text sectionStatus visually-hidden hidden">No valid section status provided</p>';
+      let sectionIdString = (cejscDict.sectionId.content)
+                            ? '<p class="card-text sectionId"><strong>Section Name: </strong>' + cejscDict.sectionId.content + '</p>'
+                            : '<p class="card-text sectionId visually-hidden hidden">No valid section ID provided</p>';
 
 
 
@@ -334,7 +334,7 @@ function assignList(arrayOfValues) {
             listOfIcons,
             primaryNameString,
             sectionNameString,
-            sectionStatusString,
+            sectionIdString,
             closeBodyWrapper,
             openFooter,
             descriptionString,
