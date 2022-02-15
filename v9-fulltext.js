@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.5.9
+ *     @version 7.5.10
  */
 
 
@@ -170,11 +170,11 @@ function assignList(arrayOfValues) {
       * */
       let beginningHTML = '<article class="cejscourseItem standardContent card" id="cejscourse' + cejscDict.contentId.content + 'fulltext" aria-label="' + cejscDict.articleTitle.content + '">';
       let endingHTML = '</article>';
-      let openHeaderWrapper = '<div class="col-12 card-header border-0 bg-transparent">';
+      let openHeaderWrapper = '<div class="card-header col-12 border-0 bg-transparent">';
       let closeHeaderWrapper = '</div>';
       let openRow = '<div class="row g-0 noGap">';
       let closeRow = '</div>';
-      let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
+      let openBodyWrapper = '<div class="articleSummary card-body col-12">';
       let closeBodyWrapper = '</div>';
       let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none">';
       let closeFooter = '</div>';
