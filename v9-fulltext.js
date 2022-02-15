@@ -152,8 +152,9 @@ function assignList(arrayOfValues) {
         courseDescription: getContentValues('<t4 type="content" name="Description" output="normal" modifiers="medialibrary,nav_sections" />'),
         primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
         sectionName: getContentValues('<t4 type="content" name="Section Name" output="normal" modifiers="striptags,htmlentities" />'),
-
-
+        sectionStatus: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
+        sustainabilityFocused: getContentValues('<t4 type="content" name="Focused" output="normal" modifiers="striptags,htmlentities" />'),
+        sustainabilityInclusive: getContentValues('<t4 type="content" name="Inclusive" output="normal" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />'),
         anchorTag: getContentValues('<t4 type="meta" meta="html_anchor" />')
 
