@@ -287,6 +287,17 @@ function assignList(arrayOfValues) {
 
 
     /***
+      *  check for section status
+      * 
+      * */
+      let sectionStatusString = (cejscDict.sectionStatus.content)
+                                ? '<p class="card-text sectionStatus"><strong>Section Status: </strong>' + cejscDict.sectionStatus.content + '</p>'
+                                : '<p class="card-text sectionStatus visually-hidden hidden">No valid section status provided</p>';
+
+
+
+
+    /***
       *  check sustainability focused
       * 
       * */
@@ -358,6 +369,7 @@ function assignList(arrayOfValues) {
             primaryNameString,
             sectionNameString,
             sectionIdString,
+            sectionStatusString,
             focusedString,
             inclusiveString,
             closeBodyWrapper,
