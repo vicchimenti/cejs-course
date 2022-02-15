@@ -4,8 +4,7 @@
      *                  v9/organizer/cejscourse
      *                  id:5650
      *
-     *     This content type will work in conjunction with the Organizer and each item
-     *     will contain one announcement.
+     *     This content type will work in conjunction with the Organizer.
      *
      *     Document will write once when the page loads
      *
