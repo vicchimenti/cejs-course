@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.5.6
+ *     @version 7.5.7
  */
 
 
@@ -177,7 +177,7 @@ function assignList(arrayOfValues) {
       let openBodyWrapper = '<div class="articleSummary col-12 card-body">';
       let closeBodyWrapper = '</div>';
       let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none"><p class="card-text courseDescription">';
-      let closeFooter = '</P></div>';
+      let closeFooter = '</div>';
       let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
  
  
@@ -259,7 +259,7 @@ function assignList(arrayOfValues) {
       * */
       let primaryNameString =   (cejscDict.primarySectionName.content)
                                 ? '<p class="card-text primarySectionName"><strong>Primary Section Name: </strong>' + cejscDict.primarySectionName.content + '</p>'
-                                : '<p class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</p>';
+                                : '<span class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</span>';
 
 
 
@@ -270,7 +270,7 @@ function assignList(arrayOfValues) {
       * */
       let sectionNameString =   (cejscDict.sectionName.content)
                                 ? '<p class="card-text sectionName"><strong>Section Name: </strong>' + cejscDict.sectionName.content + '</p>'
-                                : '<p class="card-text sectionName visually-hidden hidden">No valid section name provided</p>';
+                                : '<span class="card-text sectionName visually-hidden hidden">No valid section name provided</span>';
 
 
                                 
@@ -281,7 +281,7 @@ function assignList(arrayOfValues) {
       * */
       let sectionIdString = (cejscDict.sectionId.content)
                             ? '<p class="card-text sectionId"><strong>Section ID: </strong>' + cejscDict.sectionId.content + '</p>'
-                            : '<p class="card-text sectionId visually-hidden hidden">No valid section ID provided</p>';
+                            : '<span class="card-text sectionId visually-hidden hidden">No valid section ID provided</span>';
 
 
 
@@ -292,7 +292,7 @@ function assignList(arrayOfValues) {
       * */
       let sectionStatusString = (cejscDict.sectionStatus.content)
                                 ? '<p class="card-text sectionStatus"><strong>Section Status: </strong>' + cejscDict.sectionStatus.content + '</p>'
-                                : '<p class="card-text sectionStatus visually-hidden hidden">No valid section status provided</p>';
+                                : '<span class="card-text sectionStatus visually-hidden hidden">No valid section status provided</span>';
 
 
 
@@ -303,7 +303,7 @@ function assignList(arrayOfValues) {
       * */
       let focusedString =   (cejscDict.sustainabilityFocused.content)
                             ? '<p class="card-text sustainabilityFocused"><strong>Sustainability Focused: </strong>' + cejscDict.sustainabilityFocused.content + '</p>'
-                            : '<p class="card-text sustainabilityFocused visually-hidden hidden">No valid focus property provided</p>';
+                            : '<span class="card-text sustainabilityFocused visually-hidden hidden">No valid focus property provided</span>';
 
 
 
@@ -314,7 +314,7 @@ function assignList(arrayOfValues) {
       * */
       let inclusiveString = (cejscDict.sustainabilityInclusive.content)
                             ? '<p class="card-text sustainabilityInclusive"><strong>Sustainability Inclusive: </strong>' + cejscDict.sustainabilityInclusive.content + '</p>'
-                            : '<p class="card-text sustainabilityInclusive visually-hidden hidden">No valid inclusive property provided</p>';
+                            : '<span class="card-text sustainabilityInclusive visually-hidden hidden">No valid inclusive property provided</span>';
 
 
 
@@ -345,8 +345,8 @@ function assignList(arrayOfValues) {
       * 
       * */
     if (cejscDict.courseDescription.content) {
-        descriptionString = cejscDict.courseDescription.content;
-        openFooter = '<div class="card-footer border-0 bg-0"><p class="card-text courseDescription">';
+        descriptionString = '<p class="card-text courseDescription">' + cejscDict.courseDescription.content + '</p>';
+        openFooter = '<div class="card-footer border-0 bg-0">';
     }
 
      
