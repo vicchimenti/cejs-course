@@ -9,7 +9,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.1
+     *     @version 8.5.2
      */
 
 
@@ -231,7 +231,7 @@
           * 
           * */
          let endingHTML = '</article>';
-         let openCardHeader = '<div class="card-header">';
+         let openCardHeader = '<div class="card-header border-0 bg-0">';
          let closeCardHeader = '</div>'
          let openBodyWrapper = '<div class="articleSummary card-body">';
          let closeBodyWrapper = '</div>';
