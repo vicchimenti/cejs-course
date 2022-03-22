@@ -279,9 +279,9 @@ function assignList(arrayOfValues) {
       *  check for section id
       * 
       * */
-      let sectionIdString = (cejscDict.sectionId.content)
-                            ? '<p class="card-text sectionId"><strong>Section ID: </strong>' + cejscDict.sectionId.content + '</p>'
-                            : '<span class="card-text sectionId visually-hidden hidden">No valid section ID provided</span>';
+    //   let sectionIdString = (cejscDict.sectionId.content)
+    //                         ? '<p class="card-text sectionId"><strong>Section ID: </strong>' + cejscDict.sectionId.content + '</p>'
+    //                         : '<span class="card-text sectionId visually-hidden hidden">No valid section ID provided</span>';
 
 
 
@@ -290,9 +290,9 @@ function assignList(arrayOfValues) {
       *  check for section status
       * 
       * */
-      let sectionStatusString = (cejscDict.sectionStatus.content)
-                                ? '<p class="card-text sectionStatus"><strong>Section Status: </strong>' + cejscDict.sectionStatus.content + '</p>'
-                                : '<span class="card-text sectionStatus visually-hidden hidden">No valid section status provided</span>';
+    //   let sectionStatusString = (cejscDict.sectionStatus.content)
+    //                             ? '<p class="card-text sectionStatus"><strong>Section Status: </strong>' + cejscDict.sectionStatus.content + '</p>'
+    //                             : '<span class="card-text sectionStatus visually-hidden hidden">No valid section status provided</span>';
 
 
 
@@ -301,9 +301,9 @@ function assignList(arrayOfValues) {
       *  check sustainability focused
       * 
       * */
-      let focusedString =   (cejscDict.sustainabilityFocused.content)
-                            ? '<p class="card-text sustainabilityFocused"><strong>Sustainability Focused: </strong>' + cejscDict.sustainabilityFocused.content + '</p>'
-                            : '<span class="card-text sustainabilityFocused visually-hidden hidden">No valid focus property provided</span>';
+    //   let focusedString =   (cejscDict.sustainabilityFocused.content)
+    //                         ? '<p class="card-text sustainabilityFocused"><strong>Sustainability Focused: </strong>' + cejscDict.sustainabilityFocused.content + '</p>'
+    //                         : '<span class="card-text sustainabilityFocused visually-hidden hidden">No valid focus property provided</span>';
 
 
 
@@ -312,9 +312,9 @@ function assignList(arrayOfValues) {
       *  check sustainability focused
       * 
       * */
-      let inclusiveString = (cejscDict.sustainabilityInclusive.content)
-                            ? '<p class="card-text sustainabilityInclusive"><strong>Sustainability Inclusive: </strong>' + cejscDict.sustainabilityInclusive.content + '</p>'
-                            : '<span class="card-text sustainabilityInclusive visually-hidden hidden">No valid inclusive property provided</span>';
+    //   let inclusiveString = (cejscDict.sustainabilityInclusive.content)
+    //                         ? '<p class="card-text sustainabilityInclusive"><strong>Sustainability Inclusive: </strong>' + cejscDict.sustainabilityInclusive.content + '</p>'
+    //                         : '<span class="card-text sustainabilityInclusive visually-hidden hidden">No valid inclusive property provided</span>';
 
 
 
