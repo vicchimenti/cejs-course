@@ -66,29 +66,29 @@ $(function () {
 
 
             //   ***   School Filter   ***   //
-            // $(function () {
-            //     $('#SelectBox-BySchool input:radio').change(function () {
-            //         let typeKey = $(this).val();
-            //         let viewAll = "All";
+            $(function () {
+                $('#SelectBox-BySchool input:radio').change(function () {
+                    let typeKey = $(this).val();
+                    let viewAll = "All";
 
-            //         if (typeKey != viewAll) {
-            //             $('.college').filter(function (i, e) {
-            //                 var typeValue = $(this).text();
+                    if (typeKey != viewAll) {
+                        $('.college').filter(function (i, e) {
+                            var typeValue = $(this).text();
 
-            //                 if (typeValue.match(typeKey)) {
-            //                     $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
-            //                 } else {
-            //                     $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
-            //                 }
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
+                            } else {
+                                $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
+                            }
 
-            //             });
-            //         } else {
-            //             $('.cejscourseWrapper').removeClass('hideBySchool');
-            //         }
+                        });
+                    } else {
+                        $('.cejscourseWrapper').removeClass('hideBySchool');
+                    }
 
-            //         parseItems.process();
-            //     });
-            // });
+                    parseItems.process();
+                });
+            });
 
 
 
