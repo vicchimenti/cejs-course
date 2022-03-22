@@ -362,10 +362,10 @@
           *  Parse for media item titles and add to wrapper classes for isotope search engine
           * 
           * */
-         if (cejscDict.icons.content) {
-             let mediaTitles = wrapperTargets(cejscDict.icons.content);
-             beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 ' + mediaTitles + 'mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
-         }
+        //  if (cejscDict.icons.content) {
+        //      let mediaTitles = wrapperTargets(cejscDict.icons.content);
+        //      beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 ' + mediaTitles + 'mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" aria-label="' + cejscDict.articleTitle.content + '">';
+        //  }
  
  
  
