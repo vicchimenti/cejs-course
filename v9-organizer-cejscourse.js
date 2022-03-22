@@ -160,20 +160,20 @@
      /***
       *      Returns a formatted html img tag
       */
-     function wrapperTargets(idList) {
+    //  function wrapperTargets(idList) {
  
-         let mediaIdArray = idList.split(',');
-         let targetArray = [];
+    //      let mediaIdArray = idList.split(',');
+    //      let targetArray = [];
  
-         for (mediaId in mediaIdArray) {
+    //      for (mediaId in mediaIdArray) {
  
-             targetArray[mediaId] = getTarget(mediaIdArray[mediaId].trim());
-         }
+    //          targetArray[mediaId] = getTarget(mediaIdArray[mediaId].trim());
+    //      }
  
-         let targets = formatTargets(targetArray);
+    //      let targets = formatTargets(targetArray);
  
-         return targets;
-     }
+    //      return targets;
+    //  }
  
  
  
