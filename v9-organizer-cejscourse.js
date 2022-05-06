@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.6
+     *     @version 8.5.7
      */
 
 
@@ -105,7 +105,7 @@
          let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
          let mediaInfo = getMediaInfo(itemId);
          let media = readMedia(itemId);
-         let info = new ImageInfo;
+         let info = new ImageInfo();
          info.setInput(media);
  
          let mediaHTML = (info.check()) ?
@@ -125,7 +125,7 @@
  
          let mediaInfo = getMediaInfo(itemId);
          let media = readMedia(itemId);
-         let info = new ImageInfo;
+         let info = new ImageInfo();
          info.setInput(media);
  
          let target = (info.check()) ? '' + mediaInfo.getName() + '' : null;
@@ -210,7 +210,7 @@
           * */
          let endingHTML = '</article>';
          let openCardHeader = '<div class="card-header border-0 bg-transparent">';
-         let closeCardHeader = '</div>'
+         let closeCardHeader = '</div>';
          let openBodyWrapper = '<div class="articleSummary card-body">';
          let closeBodyWrapper = '</div>';
          let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
@@ -325,7 +325,7 @@
              let iconArray = cejscDict.icons.content.split(',');
              let iconPathArray = [];
  
-             for (icon in iconArray) {
+             for (let icon in iconArray) {
  
                  iconPathArray[icon] = mediaTag(iconArray[icon].trim());
              }
