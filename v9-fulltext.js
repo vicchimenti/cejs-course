@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.5.11
+ *     @version 7.6
  */
 
 
@@ -38,12 +38,12 @@
          return {
              isError: false,
              content: _tag == '' ? null : _tag
-         }
+         };
      } catch (error) {
          return {
              isError: true,
              message: error.message
-         }
+         };
      }
  }
  
@@ -86,12 +86,12 @@
     let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
     let mediaInfo = getMediaInfo(itemId);
     let media = readMedia(itemId);
-    let info = new ImageInfo;
+    let info = new ImageInfo();
     info.setInput(media);
 
-    let mediaHTML = (info.check())
-                    ? '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>'
-                    : '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
+    let mediaHTML = (info.check()) ?
+                    '<figure class="figure"><img src="' + mediaPath + '" class="listgroupImage figure-img img-fluid" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>' :
+                    '<span class="listgroupImage visually-hidden hidden">Invalid Image ID</span>';
 
     return mediaHTML;
  }
@@ -168,7 +168,7 @@ function assignList(arrayOfValues) {
       *  default html initializations
       * 
       * */
-      let beginningHTML = '<article class="cejscourseItem standardContent card" id="cejscourse' + cejscDict.contentId.content + 'fulltext" aria-label="' + cejscDict.articleTitle.content + '">';
+      let beginningHTML = '<article class="cejscourseItem standardContent card" id="cejscourse' + cejscDict.contentId.content + 'fulltext" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">';
       let endingHTML = '</article>';
       let openHeaderWrapper = '<div class="card-header col-12 border-0 bg-transparent">';
       let closeHeaderWrapper = '</div>';
@@ -257,9 +257,9 @@ function assignList(arrayOfValues) {
       *  check for primary section name
       * 
       * */
-      let primaryNameString =   (cejscDict.primarySectionName.content)
-                                ? '<p class="card-text primarySectionName"><strong>Primary Section Name: </strong>' + cejscDict.primarySectionName.content + '</p>'
-                                : '<span class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</span>';
+    //   let primaryNameString =   (cejscDict.primarySectionName.content)
+    //                             ? '<p class="card-text primarySectionName"><strong>Primary Section Name: </strong>' + cejscDict.primarySectionName.content + '</p>'
+    //                             : '<span class="card-text primarySectionName visually-hidden hidden">No valid primary section name provided</span>';
 
 
 
@@ -268,9 +268,9 @@ function assignList(arrayOfValues) {
       *  check for section name
       * 
       * */
-      let sectionNameString =   (cejscDict.sectionName.content)
-                                ? '<p class="card-text sectionName"><strong>Section Name: </strong>' + cejscDict.sectionName.content + '</p>'
-                                : '<span class="card-text sectionName visually-hidden hidden">No valid section name provided</span>';
+    //   let sectionNameString =   (cejscDict.sectionName.content)
+    //                             ? '<p class="card-text sectionName"><strong>Section Name: </strong>' + cejscDict.sectionName.content + '</p>'
+    //                             : '<span class="card-text sectionName visually-hidden hidden">No valid section name provided</span>';
 
 
                                 
@@ -366,8 +366,8 @@ function assignList(arrayOfValues) {
             closeHeaderWrapper,
             openBodyWrapper,
             listOfIcons,
-            primaryNameString,
-            sectionNameString,
+            // primaryNameString,
+            // sectionNameString,
             closeBodyWrapper,
             openFooter,
             descriptionString,
