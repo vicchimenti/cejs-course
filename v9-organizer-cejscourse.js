@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.5
+     *     @version 8.5.6
      */
 
 
@@ -39,12 +39,12 @@
              return {
                  isError: false,
                  content: _tag == '' ? null : _tag
-             }
+             };
          } catch (error) {
              return {
                  isError: true,
                  message: error.message
-             }
+             };
          }
      }
  
@@ -240,11 +240,11 @@
          let maxLength = 200;
          let plainString = (cejscDict.summaryDescription.content) ? '' + cejscDict.summaryDescription.content +  '' : null;
          let actualLength = (plainString) ? plainString.length : null;
-         let summarySubstring = (plainString && actualLength && actualLength > maxLength)
-                                ? plainString.substring(0, maxLength)
-                                : (plainString && actualLength && actualLength <= maxLength)
-                                ? plainString.substring(0, actualLength)
-                                : null;
+         let summarySubstring = (plainString && actualLength && actualLength > maxLength) ?
+                                plainString.substring(0, maxLength) :
+                                (plainString && actualLength && actualLength <= maxLength) ?
+                                plainString.substring(0, actualLength) :
+                                null;
                                 
                                 
 
@@ -253,9 +253,9 @@
           *  format summary
           * 
           * */
-         let summaryString =    (summarySubstring && cejscDict.articleTitle.content)
-                                ? '<p class="card-text shortSummary">' + summarySubstring + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>'
-                                : '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
+         let summaryString =    (summarySubstring && cejscDict.articleTitle.content) ?
+                                '<p class="card-text shortSummary">' + summarySubstring + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>' :
+                                '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
 
  
  
