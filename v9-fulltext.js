@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.6
+ *     @version 7.6.1
  */
 
 
@@ -328,7 +328,7 @@ function assignList(arrayOfValues) {
         let iconArray = cejscDict.icons.content.split(',');
         let iconPathArray = [];
 
-        for (icon in iconArray) {
+        for (let icon in iconArray) {
 
             iconPathArray[icon] = mediaTag(iconArray[icon].trim());
         }
