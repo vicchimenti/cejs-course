@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.8
+     *     @version 8.5.9
      */
 
 
@@ -223,8 +223,8 @@
           * 
           * */
          let beginningHTML =    (cejscDict.articleTitle.content) ?
-                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.contentName.content + '">' :
-                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">';
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">' :
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.contentName.content + '">';
 
  
   
