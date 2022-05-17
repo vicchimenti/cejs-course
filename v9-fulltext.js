@@ -300,8 +300,6 @@ function assignList(arrayOfValues) {
             closeHeaderWrapper,
             openBodyWrapper,
             listOfIcons,
-            // primaryNameString,
-            // sectionNameString,
             closeBodyWrapper,
             openFooter,
             descriptionString,
