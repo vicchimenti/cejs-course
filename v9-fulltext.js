@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.6.1
+ *     @version 7.6.2
  */
 
 
@@ -179,6 +179,8 @@ function assignList(arrayOfValues) {
       let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none">';
       let closeFooter = '</div>';
       let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
+      let listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal hidden visually-hidden">No valid icon provided</ul>';
+
  
  
  
