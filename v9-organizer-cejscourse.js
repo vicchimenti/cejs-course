@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.9
+     *     @version 8.5.10
      */
 
 
@@ -187,6 +187,7 @@
          let cejscDict = {
  
              contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+             sectionId: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
              articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
              courseName: getContentValues('<t4 type="content" name="Course Name" output="normal" modifiers="striptags,htmlentities" />'),
              college: getContentValues('<t4 type="content" name="College" output="normal" modifiers="striptags,htmlentities" />'),
@@ -224,8 +225,20 @@
           * */
          let beginningHTML =    (cejscDict.articleTitle.content) ?
                                 '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">' :
+                                (cejscDict.primarySectionName.content) ?
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.primarySectionName.content + '">' :
                                 '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.contentName.content + '">';
 
+
+
+
+        /***
+          *  include section id
+          * 
+          * */
+         let sectionIdString =  (cejscDict.sectionId.content) ?
+                                '<span class="sectionId hidden visually-hidden">' + cejscDict.sectionId.content + '</span>' :
+                                '<span class="sectionId hidden visually-hidden">No valid Section ID provided</span>';
  
   
 
@@ -361,6 +374,7 @@
                  openBodyWrapper,
                  summaryString,
                  listOfIcons,
+                 sectionIdString,
                  closeBodyWrapper,
                  endingHTML
              ]
