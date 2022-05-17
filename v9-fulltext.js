@@ -172,8 +172,6 @@ function assignList(arrayOfValues) {
       let endingHTML = '</article>';
       let openHeaderWrapper = '<div class="card-header col-12 border-0 bg-transparent">';
       let closeHeaderWrapper = '</div>';
-      let openRow = '<div class="row g-0 noGap">';
-      let closeRow = '</div>';
       let openBodyWrapper = '<div class="articleSummary card-body col-12">';
       let closeBodyWrapper = '</div>';
       let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none">';
