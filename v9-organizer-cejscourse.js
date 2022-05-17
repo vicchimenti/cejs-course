@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.7
+     *     @version 8.5.8
      */
 
 
@@ -214,11 +214,21 @@
          let openBodyWrapper = '<div class="articleSummary card-body">';
          let closeBodyWrapper = '</div>';
          let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-         let beginningHTML = '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">';
  
- 
+
+
+
+        /***
+          *  define wrapper
+          * 
+          * */
+         let beginningHTML =    (cejscDict.articleTitle.content) ?
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.contentName.content + '">' :
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">';
+
  
   
+
          /***
           *  check for fulltext content
           * 
