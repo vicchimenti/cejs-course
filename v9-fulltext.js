@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.6.3
+ *     @version 7.6.4
  */
 
 
@@ -280,7 +280,7 @@ function assignList(arrayOfValues) {
       * */
     if (cejscDict.courseDescription.content) {
         descriptionString = '<p class="card-text courseDescription">' + cejscDict.courseDescription.content + '</p>';
-        openFooter = '<div class="card-footer border-0 bg-0">';
+        openFooter = '<div class="card-footer border-0 bg-transparent">';
     }
 
      
