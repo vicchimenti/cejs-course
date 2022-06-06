@@ -168,13 +168,13 @@ function assignList(arrayOfValues) {
       *  default html initializations
       * 
       * */
-      let beginningHTML = '<article class="cejscourseItem standardContent card" id="cejscourse' + cejscDict.contentId.content + 'fulltext" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">';
+      let beginningHTML = '<article class="cejscourseItem standardContent card border-0" id="cejscourse' + cejscDict.contentId.content + 'fulltext" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">';
       let endingHTML = '</article>';
       let openHeaderWrapper = '<div class="card-header col-12 border-0 bg-transparent">';
       let closeHeaderWrapper = '</div>';
       let openBodyWrapper = '<div class="articleSummary card-body col-12">';
       let closeBodyWrapper = '</div>';
-      let openFooter = '<div class="card-footer border-0 bg-0 visually-hidden hidden d-none">';
+      let openFooter = '<div class="card-footer border-0 bg-transparent visually-hidden hidden d-none">';
       let closeFooter = '</div>';
       let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
       let listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal hidden visually-hidden">No valid icon provided</ul>';
