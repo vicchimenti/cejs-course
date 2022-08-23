@@ -102,6 +102,7 @@
       */
      function mediaTag(itemId) {
  
+        // media path would be a good place to route through get content values to check for nulls and return a detailed error code
          let mediaPath = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="' + itemId + '" />');
          let mediaInfo = getMediaInfo(itemId);
          let media = readMedia(itemId);
