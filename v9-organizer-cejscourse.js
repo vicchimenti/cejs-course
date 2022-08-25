@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.14
+     *     @version 8.5.16
      */
 
 
@@ -378,7 +378,7 @@
             }
 
             let iconValues = assignList(iconPathArray);
-            listOfLsapIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+            listOfLsapIcons = '<div class="col-12 w-100 d-flex justify-content-end"><ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul></div>';
         }
 
 
