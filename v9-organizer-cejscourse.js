@@ -386,6 +386,7 @@
                  openBodyWrapper,
                  summaryString,
                  listOfIcons,
+                 lsapIconString,
                  sectionIdString,
                  closeBodyWrapper,
                  endingHTML
