@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.13
+     *     @version 8.5.14
      */
 
 
@@ -216,7 +216,7 @@
          let openBodyWrapper = '<div class="articleSummary card-body">';
          let closeBodyWrapper = '</div>';
          let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-         let listOfLsapIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+         let listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
 
  
 
@@ -369,7 +369,7 @@
           * */
         if (cejscDict.lsapIcons.content) {
 
-            let iconArray = cejscDict.icons.content.split(',');
+            let iconArray = cejscDict.lsapIcons.content.split(',');
             let iconPathArray = [];
 
             for (let icon in iconArray) {
