@@ -216,6 +216,8 @@
          let openBodyWrapper = '<div class="articleSummary card-body">';
          let closeBodyWrapper = '</div>';
          let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+         let listOfLsapIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+
  
 
 
@@ -376,7 +378,7 @@
             }
 
             let iconValues = assignList(iconPathArray);
-            listOfIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+            listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
         }
 
 
@@ -407,6 +409,7 @@
                  openBodyWrapper,
                  summaryString,
                  listOfIcons,
+                 listOfLsapIcons,
                  lsapIconString,
                  sectionIdString,
                  closeBodyWrapper,
