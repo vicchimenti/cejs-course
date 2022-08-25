@@ -367,7 +367,7 @@
           *  Parse and format lsap icons
           * 
           * */
-        if (cejscDict.icons.content) {
+        if (cejscDict.lsapIcons.content) {
 
             let iconArray = cejscDict.icons.content.split(',');
             let iconPathArray = [];
