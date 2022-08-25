@@ -378,7 +378,7 @@
             }
 
             let iconValues = assignList(iconPathArray);
-            listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+            listOfLsapIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
         }
 
 
@@ -389,7 +389,7 @@
           * 
           * */
         let lsapIconString = (cejscDict.lsapIcons.content) ?
-            '<span class="card-text lsaps">' + cejscDict.lsapIcons.content + '</span>' :
+            '<span class="card-text lsaps hidden visually-hidden">' + cejscDict.lsapIcons.content + '</span>' :
             '<span class="card-text nolsaps">No lsap provided</span>';
 
  
