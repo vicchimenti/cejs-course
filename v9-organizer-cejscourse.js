@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.12
+     *     @version 8.5.13
      */
 
 
@@ -341,7 +341,7 @@
  
  
          /***
-          *  Parse and format icons
+          *  Parse and format sdg icons
           * 
           * */
          if (cejscDict.icons.content) {
@@ -362,12 +362,33 @@
 
 
         /***
+          *  Parse and format lsap icons
+          * 
+          * */
+        if (cejscDict.icons.content) {
+
+            let iconArray = cejscDict.icons.content.split(',');
+            let iconPathArray = [];
+
+            for (let icon in iconArray) {
+
+                iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+            }
+
+            let iconValues = assignList(iconPathArray);
+            listOfIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+        }
+
+
+
+
+        /***
           *  check for lsap icons
           * 
           * */
         let lsapIconString = (cejscDict.lsapIcons.content) ?
-        '<span class="card-text lsaps">' + cejscDict.lsapIcons.content + '</span>' :
-        '<span class="card-text nolsaps">No lsap provided</span>';
+            '<span class="card-text lsaps">' + cejscDict.lsapIcons.content + '</span>' :
+            '<span class="card-text nolsaps">No lsap provided</span>';
 
  
  
