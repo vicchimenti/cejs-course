@@ -357,7 +357,18 @@
              let iconValues = assignList(iconPathArray);
              listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
          }
- 
+
+
+
+
+        /***
+          *  check for lsap icons
+          * 
+          * */
+        let lsapIconString = (cejscDict.lsapIcons.content) ?
+        '<span class="card-text lsaps">' + cejscDict.lsapIcons.content + '</span>' :
+        '<span class="card-text nolsaps">No lsap provided</span>';
+
  
  
    
