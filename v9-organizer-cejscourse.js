@@ -382,17 +382,6 @@
         }
 
 
-
-
-        /***
-          *  check for lsap icons
-          * 
-          * */
-        // let lsapIconString = (cejscDict.lsapIcons.content) ?
-        //     '<span class="card-text lsaps hidden visually-hidden">' + cejscDict.lsapIcons.content + '</span>' :
-        //     '<span class="card-text nolsaps">No lsap provided</span>';
-
- 
  
    
          /***
