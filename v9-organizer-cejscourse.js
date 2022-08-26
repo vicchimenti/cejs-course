@@ -412,11 +412,11 @@
                  openCardHeader,
                  titleLink,
                  subtitleString,
+                 listOfLsapIcons,
                  closeCardHeader,
                  openBodyWrapper,
                  summaryString,
                  listOfIcons,
-                 listOfLsapIcons,
                  sectionIdString,
                  closeBodyWrapper,
                  endingHTML
