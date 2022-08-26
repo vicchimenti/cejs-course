@@ -378,7 +378,7 @@
             }
 
             let iconValues = assignList(iconPathArray);
-            listOfLsapIcons = '<div class="col-12 w-100 d-flex justify-content-end"><ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul></div>';
+            listOfLsapIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
         }
 
 
