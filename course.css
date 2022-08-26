@@ -115,9 +115,9 @@
     content: unset;
 }
 
-.cejscourseWrapper img.listgroupImage {
-    max-height: 100px;
-    max-width: 100px;
+.cejscourseWrapper .lsapIcon img.listgroupImage {
+    max-height: 25px;
+    max-width: 25px;
     padding: 0;
 }
 
