@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.21
+     *     @version 8.5.22
      */
 
 
@@ -78,7 +78,7 @@
 
         for (let i = 0; i < arrayOfValues.length; i++) {
 
-            listValues += '<li class="list-group-item lsapIcone">' + arrayOfValues[i].trim() + '</li>';
+            listValues += '<li class="list-group-item lsapIcon">' + arrayOfValues[i].trim() + '</li>';
         }
 
         return listValues;
