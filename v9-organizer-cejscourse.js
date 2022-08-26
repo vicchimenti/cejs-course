@@ -357,7 +357,7 @@
              }
  
              let iconValues = assignList(iconPathArray);
-             listOfIcons = '<ul class="sdgIconconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+             listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
          }
 
 
