@@ -24,7 +24,7 @@
 }
 
 .cejscourseWrapper .card-header {
-    margin: 0 1.5rem;
+    margin: 0 1.5rem 1.6rem 1.5rem;
     padding-top: 1rem;
 }
 
@@ -57,6 +57,7 @@
 
 .cejscourseWrapper p.card-subtitle {
     font-size: 1.6rem;
+    margin-bottom: 0;
 }
 
 .cejscourseWrapper .articleSummary p {
