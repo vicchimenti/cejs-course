@@ -52,9 +52,9 @@
  
  
      /***
-      *      Returns an array of list items
+      *      Returns an array of sdg items
       */
-     function assignList(arrayOfValues) {
+     function assignSdgList(arrayOfValues) {
  
          let listValues = '';
  
@@ -66,9 +66,27 @@
          return listValues;
      }
  
+
+
+
+    /***
+      *      Returns an array of sdg items
+      */
+     function assignLsapList(arrayOfValues) {
+
+        let listValues = '';
+
+        for (let i = 0; i < arrayOfValues.length; i++) {
+
+            listValues += '<li class="list-group-item lsapIcone">' + arrayOfValues[i].trim() + '</li>';
+        }
+
+        return listValues;
+     }
  
  
  
+
      /***
       *      Returns a media object
       */
@@ -356,7 +374,7 @@
                  iconPathArray[icon] = mediaTag(iconArray[icon].trim());
              }
  
-             let iconValues = assignList(iconPathArray);
+             let iconValues = assignSdgList(iconPathArray);
              listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
          }
 
@@ -377,7 +395,7 @@
                 iconPathArray[icon] = mediaTag(iconArray[icon].trim());
             }
 
-            let iconValues = assignList(iconPathArray);
+            let iconValues = assignLsapList(iconPathArray);
             listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
         }
 
