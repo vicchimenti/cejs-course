@@ -357,7 +357,7 @@
              }
  
              let iconValues = assignList(iconPathArray);
-             listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+             listOfIcons = '<ul class="sdgIconconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
          }
 
 
@@ -378,7 +378,7 @@
             }
 
             let iconValues = assignList(iconPathArray);
-            listOfLsapIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+            listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
         }
 
 
