@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.24
+     *     @version 8.5.25
      */
 
 
@@ -415,8 +415,8 @@
                  closeCardHeader,
                  openBodyWrapper,
                  summaryString,
-                 listOfIcons,
                  listOfLsapIcons,
+                 listOfIcons,
                  sectionIdString,
                  closeBodyWrapper,
                  endingHTML
