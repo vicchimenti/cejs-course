@@ -271,7 +271,28 @@ function assignList(arrayOfValues) {
         let iconValues = assignList(iconPathArray);
         listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
     }
- 
+
+
+
+
+        /***
+         *  Parse and format lsap icons
+         * 
+         * */
+        if (cejscDict.lsapIcons.content) {
+
+            let iconArray = cejscDict.lsapIcons.content.split(',');
+            let iconPathArray = [];
+
+            for (let icon in iconArray) {
+
+                iconPathArray[icon] = mediaTag(iconArray[icon].trim());
+            }
+
+            let iconValues = assignLsapList(iconPathArray);
+            listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+        }
+
 
 
 
