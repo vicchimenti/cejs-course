@@ -84,6 +84,7 @@
     position: relative;
     text-transform: lowercase;
     top: 4px;
+    white-space: nowrap;
 }
 
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
