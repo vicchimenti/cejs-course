@@ -117,9 +117,9 @@
 }
 
 .cejscourseWrapper .lsapIcon img.listgroupImage {
-    max-height: 40px;
-    max-width: 40px;
-    padding: 0;
+    max-height: 100px;
+    max-width: 100px;
+    padding: 0 0 0.5rem 0;
 }
 
 
