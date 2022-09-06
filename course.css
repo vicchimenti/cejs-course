@@ -77,7 +77,7 @@
     text-decoration: underline;
 }
 
-.cejscourseWrapper p.shortSummary:after {
+/* .cejscourseWrapper p.shortSummary:after {
     color: #aa0000;
     content: ' b';
     font-family: 'seattle-u';
@@ -85,7 +85,7 @@
     text-transform: lowercase;
     top: 4px;
     white-space: nowrap;
-}
+} */
 
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
     display: inline-block;
