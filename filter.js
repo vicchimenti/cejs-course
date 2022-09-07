@@ -134,15 +134,17 @@ $(function () {
 
                     if (elementKeys[0] != "Any") {
                         $('ul.iconDashboard').filter(function (i, e) {
-                            let elementValue = $(this).text();
+                            let elementValue = $(this).text() || null;
                             $(this).parents('.cejscourseWrapper').addClass('hideByGoal');
 
-                            for (let index = 0; index < elementKeys.length; index++) {
-                                if (elementValue.includes(elementKeys[index])) {
-                                    $(this).parents('.cejscourseWrapper').removeClass('hideByGoal');
+                            if (elementValue) {
+
+                                for (let index = 0; index < elementKeys.length; index++) {
+                                    if (elementValue.includes(elementKeys[index])) {
+                                        $(this).parents('.cejscourseWrapper').removeClass('hideByGoal');
+                                    }
                                 }
                             }
-
                         });
                     } else {
                         $('.cejscourseWrapper').removeClass('hideByGoal');
