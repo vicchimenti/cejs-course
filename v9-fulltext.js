@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.6.6
+ *     @version 7.6.7
  */
 
 
@@ -282,6 +282,8 @@ function assignLsapList(arrayOfValues) {
         let iconArray = cejscDict.icons.content.split(',');
         let iconPathArray = [];
 
+        iconArray.sort();
+
         for (let icon in iconArray) {
 
             iconPathArray[icon] = mediaTag(iconArray[icon].trim());
@@ -302,6 +304,8 @@ function assignLsapList(arrayOfValues) {
 
         let iconArray = cejscDict.lsapIcons.content.split(',');
         let iconPathArray = [];
+
+        iconArray.sort();
 
         for (let icon in iconArray) {
 
