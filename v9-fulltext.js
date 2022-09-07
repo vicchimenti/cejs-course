@@ -113,6 +113,24 @@ function assignSdgList(arrayOfValues) {
 
     return listValues;
 }
+
+
+
+
+/***
+ *      Returns an array of sdg items
+ */
+function assignLsapList(arrayOfValues) {
+
+    let listValues = '';
+
+    for (let i = 0; i < arrayOfValues.length; i++) {
+
+        listValues += '<li class="list-group-item lsapIcon">' + arrayOfValues[i].trim() + '</li>';
+    }
+
+    return listValues;
+}
  
  
  
