@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.26
+     *     @version 8.5.27
      */
 
 
@@ -298,7 +298,7 @@
           * 
           * */
          let summaryString =    (summarySubstring && cejscDict.articleTitle.content) ?
-                                '<p class="card-text shortSummary">' + summarySubstring + '... <a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></p>' :
+                                '<p class="card-text shortSummary">' + summarySubstring + '... <span class="readMore"><a href="' + cejscDict.fullTextLink.content + '" class="card-link" title="See the full course description: ' + cejscDict.articleTitle.content + '">Read More</a></span></p>' :
                                 '<span class="card-text shortSummary visually-hidden hidden">No valid summary provided</span>';
 
  
