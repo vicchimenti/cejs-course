@@ -102,7 +102,7 @@
 /***
  *      Returns an array of list items
  */
-function assignList(arrayOfValues) {
+function assignSdgList(arrayOfValues) {
 
     let listValues = '';
 
@@ -268,7 +268,7 @@ function assignList(arrayOfValues) {
             iconPathArray[icon] = mediaTag(iconArray[icon].trim());
         }
 
-        let iconValues = assignList(iconPathArray);
+        let iconValues = assignSdgList(iconPathArray);
         listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
     }
 
