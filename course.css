@@ -77,7 +77,7 @@
     text-decoration: underline;
 }
 
-.cejscourseWrapper a.card-link:after {
+.cejscourseWrapper p.shortSummary a.card-link:after {
     color: #aa0000;
     content: ' b';
     font-family: 'seattle-u';
