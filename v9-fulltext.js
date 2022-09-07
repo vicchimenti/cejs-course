@@ -197,6 +197,7 @@ function assignLsapList(arrayOfValues) {
       let closeFooter = '</div>';
       let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
       let listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal hidden visually-hidden">No valid icon provided</ul>';
+      let listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
 
  
  
