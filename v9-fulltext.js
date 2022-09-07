@@ -339,6 +339,7 @@ function assignLsapList(arrayOfValues) {
             subtitleString,
             closeHeaderWrapper,
             openBodyWrapper,
+            listOfLsapIcons,
             listOfIcons,
             closeBodyWrapper,
             openFooter,
