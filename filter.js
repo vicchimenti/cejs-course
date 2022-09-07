@@ -154,6 +154,40 @@ $(function () {
 
 
 
+
+
+            //   ***  LSAP Goals Multi-Select Checkbox Filter    ***   //
+            $(function () {
+                $('#SelectBox-ByLsap').change(function () {
+                    let elementKeys = [];
+                    elementKeys[0] = 'Any';
+                    $('input[name=SelectBox-ByLsap]:checked').each(function (item) {
+                        elementKeys[item] = $(this).val();
+                    });
+
+                    if (elementKeys[0] != "Any") {
+                        $('ul.lsapIconDashboard').filter(function (i, e) {
+                            let elementValue = $(this).text();
+                            $(this).parents('.cejscourseWrapper').addClass('hideByLsap');
+
+                            for (let index = 0; index < elementKeys.length; index++) {
+                                if (elementValue.includes(elementKeys[index])) {
+                                    $(this).parents('.cejscourseWrapper').removeClass('hideByLsap');
+                                }
+                            }
+
+                        });
+                    } else {
+                        $('.cejscourseWrapper').removeClass('hideByLsap');
+                    }
+
+                    parseItems.process();
+                });
+            });
+            
+
+
+
         }, 10);
     });
 });
