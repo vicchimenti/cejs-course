@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.28
+     *     @version 8.5.29
      */
 
 
@@ -391,6 +391,8 @@
 
             let iconArray = cejscDict.lsapIcons.content.split(',');
             let iconPathArray = [];
+
+            iconArray.sort();
 
             for (let icon in iconArray) {
 
