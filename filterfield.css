@@ -35,7 +35,7 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
 }
 
 #SelectBox-ByGoal :checked+label img {
-  transform: scale(0.9);
+  transform: scale(0.8);
   box-shadow: 0 0 5px #333;
   z-index: -1;
 }
