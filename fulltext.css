@@ -42,6 +42,24 @@
     content: unset;
 }
 
+.cejscourseItem ul.lsapIconDashboard li.lsapIcon {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.cejscourseItem ul.lsapIconDashboard li:before {
+    content: unset;
+}
+
+.cejscourseItem .lsapIcon img.listgroupImage {
+    max-height: 100px;
+    max-width: 100px;
+    padding: 0 0 0.5rem 0;
+}
+
 .cejscourseItem img.listgroupImage {
     max-height: 125px;
     max-width: 125px;
