@@ -8,7 +8,7 @@
      *
      *     Document will write once when the page loads
      *
-     *     @version 8.5.29
+     *     @version 8.5.30
      */
 
 
@@ -233,7 +233,7 @@
          let closeCardHeader = '</div>';
          let openBodyWrapper = '<div class="articleSummary card-body">';
          let closeBodyWrapper = '</div>';
-         let listOfIcons = '<ul class="list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
+         let listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
          let listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
 
  
