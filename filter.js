@@ -169,15 +169,17 @@ $(function () {
 
                     if (elementKeys[0] != "Any") {
                         $('ul.lsapIconDashboard').filter(function (i, e) {
-                            let elementValue = $(this).text();
+                            let elementValue = $(this).text() || null;
                             $(this).parents('.cejscourseWrapper').addClass('hideByLsap');
 
-                            for (let index = 0; index < elementKeys.length; index++) {
-                                if (elementValue.includes(elementKeys[index])) {
-                                    $(this).parents('.cejscourseWrapper').removeClass('hideByLsap');
+                            if (elementValue) {
+
+                                for (let index = 0; index < elementKeys.length; index++) {
+                                    if (elementValue.includes(elementKeys[index])) {
+                                        $(this).parents('.cejscourseWrapper').removeClass('hideByLsap');
+                                    }
                                 }
                             }
-
                         });
                     } else {
                         $('.cejscourseWrapper').removeClass('hideByLsap');
