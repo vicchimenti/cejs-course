@@ -9,7 +9,7 @@
 *   jQuery
 *   This script fliter/searches the CEJS Course content items for matches
 *
-*   @version 3.14
+*   @version 3.14.1
 */
 
 
@@ -31,7 +31,7 @@ $(function () {
             //   ***   Process and Parse Visible Items   ***   //
             $(function () {
                 let parseItemsToDisplay = function () {
-                    visibleItems = $('.cejscourseWrapper').not('.hideByText, .hideBySchool, .hideByLevel, .hideByGoal');
+                    visibleItems = $('.cejscourseWrapper').not('.hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap');
                     
                     if (visibleItems.length == 0) {
                         $('.noResultsToShow').removeClass('hideResultsMessage');
