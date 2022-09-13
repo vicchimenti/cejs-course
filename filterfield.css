@@ -68,7 +68,7 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
   z-index: -1;
 }
 
-#zoneA.noResultsToShow {
+#zoneA .noResultsToShow {
   background: #e3e3da;
   padding: 30px;
   margin: 15px;
