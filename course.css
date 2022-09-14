@@ -69,10 +69,7 @@
     text-decoration: none;
 }
 
-.cejscourseWrapper p.shortSummary a:hover {
-    text-decoration: underline;
-}
-
+.cejscourseWrapper p.shortSummary a:hover,
 .cejscourseWrapper p.shortSummary a:focus {
     text-decoration: underline;
 }
