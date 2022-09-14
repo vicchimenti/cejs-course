@@ -2,7 +2,7 @@
     ==========================================================================================
     ===== CEJS Course === Campus cejscourseWrappers ===== Content Type: #5650 ================
     ==========================================================================================
-    CEJS Course - Content Type requires Organizer
+    CEJS Course - Content Type requires Organizer - ZoneA
 
 */
 
@@ -130,7 +130,7 @@
 
 /* legacy fields */
 
-.cejscourseWrapper .articleSummary .panelLinks {
+/* .cejscourseWrapper .articleSummary .panelLinks {
     padding-top: 30px;
     text-align: center;
     width: 100%;
@@ -173,7 +173,7 @@
 .panelInner .panelLinks li a:focus {
     background: #088099;
     color: #ffffff;
-}
+} */
 
 .cejscourseWrapper .externalLink a:hover,
 .cejscourseWrapper .externalLink a:focus {
@@ -203,7 +203,7 @@
 
 /* ZoneB Defaults */
 
-.cejscourseWrapperZoneb {
+/* .cejscourseWrapperZoneb {
     padding: 0;
     border: none;
     margin: 0;
@@ -255,7 +255,7 @@
     display: block;
     height: 3px;
     margin: 0;
-}
+} */
 
 
 /* Mobile layouts below 992 */
