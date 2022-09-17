@@ -3,7 +3,7 @@
 *       ID: 5650
 */
 
-.cejscourseItem .card-header h1#pageTitle {
+#pageContentWrapper .cejscourseItem .card-header h1#pageTitle {
     color: #AA0000;
     font-family: "Montserrat", sans-serif;
     font-size: 3.8rem;
