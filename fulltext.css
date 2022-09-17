@@ -89,7 +89,7 @@
     .cejscourseItem {
         padding: 1rem;
     }
-    .cejscourseItem .card-header h1#pageTitle {
+    #pageContentWrapper .cejscourseItem .card-header h1#pageTitle {
         font-size: 3rem;
         padding: 3rem 0 0 0;
     }
