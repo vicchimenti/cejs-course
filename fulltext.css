@@ -86,8 +86,8 @@
 */
 
 @media screen and (max-width: 991.98px) {
-    form#articleFilter {
-        margin-top: 1rem;
+    .cejscourseItem .card-header h1#pageTitle {
+        font-size: 3rem;
     }
 }
 
