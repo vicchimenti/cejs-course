@@ -6,7 +6,7 @@
 #pageContentWrapper .cejscourseItem .card-header h1#pageTitle {
     color: #AA0000;
     font-family: "Montserrat", sans-serif;
-    font-size: 3.8rem;
+    font-size: 3.6rem;
     font-weight: 500;
     hyphens: none;
     padding: 3rem 0 0 0;
@@ -58,14 +58,14 @@
 }
 
 .cejscourseItem .lsapIcon img.listgroupImage {
-    max-height: 125px;
-    max-width: 125px;
+    max-height: 115px;
+    max-width: 115px;
     padding: 0 0 0.5rem 0;
 }
 
 .cejscourseItem img.listgroupImage {
-    max-height: 125px;
-    max-width: 125px;
+    max-height: 115px;
+    max-width: 115px;
     padding: 0;
 }
 
