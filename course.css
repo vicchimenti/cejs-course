@@ -11,17 +11,17 @@
 }
 
 .cejscourseWrapper.card {
-    padding: 0;
     background-color: #f7f7f7;
     border: none;
-    margin: 0 0 3rem 0;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    margin: 0 0 3rem 0;
+    padding: 0;
 }
 
 .cejscourseWrapper:first-child {
-    padding: 0;
     border: none;
     margin: 0;
+    padding: 0;
 }
 
 .cejscourseWrapper .card-header {
@@ -90,11 +90,11 @@
 }
 
 .cejscourseWrapper ul.iconDashboard li.sdgIcon {
+    background-color: transparent;
+    border: none;
     display: inline-block;
     padding: 0;
     margin-bottom: 0;
-    background-color: transparent;
-    border: none;
 }
 
 .cejscourseWrapper ul.iconDashboard li:before {
@@ -108,11 +108,11 @@
 }
 
 .cejscourseWrapper ul.lsapIconDashboard li.lsapIcon {
+    background-color: transparent;
+    border: none;
     display: inline-block;
     padding: 0;
     margin-bottom: 0;
-    background-color: transparent;
-    border: none;
 }
 
 .cejscourseWrapper ul.lsapIconDashboard li:before {
