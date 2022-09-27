@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 7.6.7
+ *     @version 7.7
  */
 
 
@@ -34,7 +34,7 @@
   */
   function getContentValues(tag) {
      try {
-         var _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
+         let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
          return {
              isError: false,
              content: _tag == '' ? null : _tag
@@ -55,8 +55,8 @@
   */
  function getMediaInfo(mediaID) {
  
-     var mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-     var media = mediaManager.get(mediaID, language);
+     let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+     let media = mediaManager.get(mediaID, language);
  
      return media;
  }
@@ -69,8 +69,8 @@
   */
  function readMedia(mediaID) {
  
-     var mediaObj = getMediaInfo(mediaID);
-     var oMediaStream = mediaObj.getMedia();
+     let mediaObj = getMediaInfo(mediaID);
+     let oMediaStream = mediaObj.getMedia();
  
      return oMediaStream;
  }
@@ -158,7 +158,7 @@ function assignLsapList(arrayOfValues) {
      /***
       *      Dictionary of content
       * */
-     var cejscDict = {
+     let cejscDict = {
 
         contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
@@ -172,9 +172,6 @@ function assignLsapList(arrayOfValues) {
         primarySectionName: getContentValues('<t4 type="content" name="Primary Section Name" output="normal" modifiers="striptags,htmlentities" />'),
         sectionName: getContentValues('<t4 type="content" name="Section Name" output="normal" modifiers="striptags,htmlentities" />'),
         sectionId: getContentValues('<t4 type="content" name="Section ID" output="normal" modifiers="striptags,htmlentities" />'),
-        sectionStatus: getContentValues('<t4 type="content" name="Section Current Status" output="normal" modifiers="striptags,htmlentities" />'),
-        sustainabilityFocused: getContentValues('<t4 type="content" name="Focused" output="normal" modifiers="striptags,htmlentities" />'),
-        sustainabilityInclusive: getContentValues('<t4 type="content" name="Inclusive" output="normal" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />'),
         anchorTag: getContentValues('<t4 type="meta" meta="html_anchor" />')
 
