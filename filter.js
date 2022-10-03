@@ -126,8 +126,10 @@ $(function () {
             //   ***  SDG Goals Multi-Select Checkbox Filter    ***   //
             $(function () {
                 $('#SelectBox-ByGoal').change(function () {
+                    
                     let elementKeys = [];
                     elementKeys[0] = 'Any';
+
                     $('input[name=SelectBox-ByGoal]:checked').each(function (item) {
                         elementKeys[item] = $(this).val();
                     });
