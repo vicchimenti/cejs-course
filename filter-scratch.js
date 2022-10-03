@@ -32,7 +32,10 @@ $(function () {
 
                 let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap)');
                 console.log("countedCourses: " + countedCourses.length);
-                let currentCourses = countCourses.length.toString();
+
+                let activeCourses = Array.from(countedCourses);
+                let currentCourses = activeCourses.length;
+
 
                 document.getElementById('course-count').textContent = currentCourses;
 
