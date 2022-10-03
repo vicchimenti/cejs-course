@@ -3,8 +3,20 @@
     margin: 1rem 0;
 }
 
-.courseCounter h3, .courseCounter span {
+.courseCounter {
+  margin-bottom: 15px;
+  padding: 0 15px 0 15px;
+}
+
+.courseCounter h3 {
   display: inline;
+}
+
+.courseCounter span {
+  color: #333333;
+  display: inline;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 div#filterField div#keystroke_filter_field label#keystrokeLabel {
