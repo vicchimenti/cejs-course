@@ -9,7 +9,7 @@
 *   jQuery
 *   This script fliter/searches the CEJS Course content items for matches
 *
-*   @version 3.14.8
+*   @version 3.14.9
 */
 
 
@@ -32,7 +32,6 @@ $(function () {
 
                 let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap)');
                 let activeCourses = Array.from(countedCourses);
-                let currentCourses = activeCourses.length;
 
                 document.getElementById('course-count').textContent = activeCourses.length;
             }
