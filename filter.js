@@ -9,7 +9,7 @@
 *   jQuery
 *   This script fliter/searches the CEJS Course content items for matches
 *
-*   @version 3.14.3
+*   @version 3.14.9
 */
 
 
@@ -26,6 +26,16 @@ $(function () {
             let parseItems = {};
 
 
+            
+
+            function countCourses() {
+
+                let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap)');
+                let activeCourses = Array.from(countedCourses);
+
+                document.getElementById('course-count').textContent = activeCourses.length;
+            }
+            countCourses();
 
 
             //   ***   Process and Parse Visible Items   ***   //
@@ -41,6 +51,7 @@ $(function () {
                 };
 
                 parseItems.process = parseItemsToDisplay;
+                
             });
 
 
@@ -58,6 +69,7 @@ $(function () {
                     });
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -87,6 +99,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -116,6 +129,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -155,6 +169,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -190,6 +205,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
             
