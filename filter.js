@@ -9,7 +9,7 @@
 *   jQuery
 *   This script fliter/searches the CEJS Course content items for matches
 *
-*   @version 3.14.1
+*   @version 3.14.3
 */
 
 
@@ -136,13 +136,15 @@ $(function () {
 
                     if (elementKeys[0] != "Any") {
                         $('ul.iconDashboard').filter(function (i, e) {
+
                             let elementValue = $(this).text() || null;
+                            let sdgWheel = "UN Sustainable Development Goals";
                             $(this).parents('.cejscourseWrapper').addClass('hideByGoal');
 
                             if (elementValue) {
-
                                 for (let index = 0; index < elementKeys.length; index++) {
-                                    if (elementValue.includes(elementKeys[index])) {
+
+                                    if (elementValue.includes(elementKeys[index]) || elementValue.includes(sdgWheel)) {
                                         $(this).parents('.cejscourseWrapper').removeClass('hideByGoal');
                                     }
                                 }
