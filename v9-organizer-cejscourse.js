@@ -245,10 +245,10 @@
           * 
           * */
          let beginningHTML =    (cejscDict.articleTitle.content) ?
-                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3 counted" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">' :
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.articleTitle.content + '">' :
                                 (cejscDict.primarySectionName.content) ?
-                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3 counted" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.primarySectionName.content + '">' :
-                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3 counted" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.contentName.content + '">';
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.primarySectionName.content + '">' :
+                                '<article class="cejscourseWrapper card shadow border-0 radius-0 mb-3" id="cejscourse' + cejscDict.contentId.content + 'zonea" role="contentinfo" aria-label="' + cejscDict.contentName.content + '">';
 
 
 
