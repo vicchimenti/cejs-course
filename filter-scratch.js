@@ -49,7 +49,7 @@ $(function () {
                 };
 
                 parseItems.process = parseItemsToDisplay;
-                countCourses();
+                
             });
 
 
@@ -67,6 +67,7 @@ $(function () {
                     });
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -96,6 +97,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -125,6 +127,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -164,6 +167,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
 
@@ -199,6 +203,7 @@ $(function () {
                     }
 
                     parseItems.process();
+                    countCourses();
                 });
             });
             
