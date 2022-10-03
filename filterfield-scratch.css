@@ -3,6 +3,10 @@
     margin: 1rem 0;
 }
 
+.courseCounter h3, .courseCounter span {
+  display: inline;
+}
+
 div#filterField div#keystroke_filter_field label#keystrokeLabel {
     display: none;
 }
