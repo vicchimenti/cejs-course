@@ -4,4 +4,4 @@
  */
 
 
- let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .completed, .in-progress ) 
+ let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap)');
