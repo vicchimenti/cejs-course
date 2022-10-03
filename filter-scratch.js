@@ -33,7 +33,8 @@ $(function () {
                 let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap)');
                 console.log("countedCourses: " + countedCourses.length);
 
-                course-count
+                document.getElementById('course-count').textContent = countCourses.length;
+
 
             }
             countCourses();
