@@ -141,9 +141,15 @@ $(function () {
                             let sdgWheel = "UN Sustainable Development Goals";
                             $(this).parents('.cejscourseWrapper').addClass('hideByGoal');
 
+                            console.log('elementValue: ' + elementValue);
+
+
                             if (elementValue) {
 
                                 for (let index = 0; index < elementKeys.length; index++) {
+                                    console.log('elementKey: ' + elementKeys[index]);
+
+
                                     if (elementValue.includes(elementKeys[index]) || elementValue.includes(sdgWheel)) {
                                         $(this).parents('.cejscourseWrapper').removeClass('hideByGoal');
                                     }
