@@ -39,6 +39,9 @@ $(function () {
 
                 document.getElementById('course-count').textContent = currentCourses;
 
+                console.log("currentCourses: " + currentCourses);
+
+
 
             }
             countCourses();
