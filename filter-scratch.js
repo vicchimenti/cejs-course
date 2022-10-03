@@ -25,9 +25,15 @@ $(function () {
             let visibleItems = [];
             let parseItems = {};
 
-            let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap)');
 
-            console.log("countedCourses: " + countedCourses.length);
+            
+
+            function countCourses () {
+
+                let countedCourses = document.querySelectorAll('article.cejscourseWrapper:not( .hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap)');
+                console.log("countedCourses: " + countedCourses.length);
+
+            }
 
 
             //   ***   Process and Parse Visible Items   ***   //
@@ -43,6 +49,7 @@ $(function () {
                 };
 
                 parseItems.process = parseItemsToDisplay;
+                countCourses();
             });
 
 
