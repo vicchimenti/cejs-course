@@ -107,7 +107,7 @@ div#filterField div#keystroke_filter_field label#keystrokeLabel {
 }
 
 @media screen and (max-width: 767.98px) {
-    .courseCounter.standardContent {
+    #filterField .courseCounter.standardContent {
         margin-bottom: 15px;
         padding: 15px 15px 0 15px;
     }
