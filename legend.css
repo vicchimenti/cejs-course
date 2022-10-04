@@ -1,5 +1,9 @@
 .standardContent .iconLegend img {
-    max-height: 75px;
-    max-width: 75px;
+    max-height: 50px;
+    max-width: 50px;
     padding: 0;
+}
+
+#siteNavigation {
+    margin-bottom: 0;
 }
