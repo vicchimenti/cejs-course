@@ -4,4 +4,5 @@ Course application project for UN Sustainablity Development Goals
 
 ## TODO
 
-- [] Clean fulltext
+- [x] Clean fulltext
+- [] migrate lsap icons
