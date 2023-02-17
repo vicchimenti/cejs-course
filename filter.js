@@ -161,30 +161,30 @@ $(function() {
                 });
             });
 
-            $(function() {
-                $('#SelectBox-ByLevel input:radio').change(function() {
-                    let typeKey = $(this).val();
-                    let viewAll = "All";
+            // $(function() {
+            //     $('#SelectBox-ByLevel input:radio').change(function() {
+            //         let typeKey = $(this).val();
+            //         let viewAll = "All";
 
-                    if (typeKey != viewAll) {
-                        $('.academicLevel').filter(function(i, e) {
-                            var typeValue = $(this).text();
+            //         if (typeKey != viewAll) {
+            //             $('.academicLevel').filter(function(i, e) {
+            //                 var typeValue = $(this).text();
 
-                            if (typeValue.match(typeKey)) {
-                                $(this).parents('.cejscourseWrapper').removeClass('hideByLevel');
-                            } else {
-                                $(this).parents('.cejscourseWrapper').addClass('hideByLevel');
-                            }
+            //                 if (typeValue.match(typeKey)) {
+            //                     $(this).parents('.cejscourseWrapper').removeClass('hideByLevel');
+            //                 } else {
+            //                     $(this).parents('.cejscourseWrapper').addClass('hideByLevel');
+            //                 }
 
-                        });
-                    } else {
-                        $('.cejscourseWrapper').removeClass('hideByLevel');
-                    }
+            //             });
+            //         } else {
+            //             $('.cejscourseWrapper').removeClass('hideByLevel');
+            //         }
 
-                    parseItems.process();
-                    countCourses();
-                });
-            });
+            //         parseItems.process();
+            //         countCourses();
+            //     });
+            // });
 
 
 
