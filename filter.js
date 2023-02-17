@@ -136,6 +136,32 @@ $(function() {
 
             //   ***   Course Level Filter   ***   //
             $(function() {
+
+                $('#SelectBox-ByLevel').change(function() {
+
+                    let typeKey = $(this).val();
+                    if (typeKey) {
+
+                        $('.academicLevel').filter(function(i, e) {
+                            var typeValue = $(this).text();
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.cejscourseWrapper').removeClass('hideByLevel');
+                            } else {
+                                $(this).parents('.cejscourseWrapper').addClass('hideByLevel');
+                            }
+                        });
+
+                    } else {
+
+                        $('.cejscourseWrapper').removeClass('hideByLevel');
+                    }
+
+                    parseItems.process();
+                    countCourses();
+                });
+            });
+
+            $(function() {
                 $('#SelectBox-ByLevel input:radio').change(function() {
                     let typeKey = $(this).val();
                     let viewAll = "All";
