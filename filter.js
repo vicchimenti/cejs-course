@@ -3,30 +3,30 @@
 
 
 /***
-*   @author Victor Chimenti, MSCS
-*   @file filter.js
-*
-*   jQuery
-*   This script fliter/searches the CEJS Course content items for matches
-*
-*   @version 3.14.9
-*/
+ *   @author Victor Chimenti, MSCS
+ *   @file filter.js
+ *
+ *   jQuery
+ *   This script fliter/searches the CEJS Course content items for matches
+ *
+ *   @version 3.14.9
+ */
 
 
 
 
 
 
-$(function () {
+$(function() {
 
-    $(window).load(function () {
-        setTimeout(function () {
+    $(window).load(function() {
+        setTimeout(function() {
 
             let visibleItems = [];
             let parseItems = {};
 
 
-            
+
 
             function countCourses() {
 
@@ -39,10 +39,10 @@ $(function () {
 
 
             //   ***   Process and Parse Visible Items   ***   //
-            $(function () {
-                let parseItemsToDisplay = function () {
+            $(function() {
+                let parseItemsToDisplay = function() {
                     visibleItems = $('.cejscourseWrapper').not('.hideByText, .hideBySchool, .hideByLevel, .hideByGoal, .hideByLsap');
-                    
+
                     if (visibleItems.length == 0) {
                         $('.noResultsToShow').removeClass('hideResultsMessage');
                     } else {
@@ -51,19 +51,19 @@ $(function () {
                 };
 
                 parseItems.process = parseItemsToDisplay;
-                
+
             });
 
 
 
 
             //   ***   Keyword Search   ***   //
-            $(function () {
-                $('#keystroke_filter').on('keyup', function () {
+            $(function() {
+                $('#keystroke_filter').on('keyup', function() {
                     let keyword = $(this).val().toLowerCase();
 
-                    $(function () {
-                        $('.cejscourseWrapper').filter(function () {
+                    $(function() {
+                        $('.cejscourseWrapper').filter(function() {
                             $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
                     });
@@ -78,23 +78,24 @@ $(function () {
 
 
             //   ***   School Filter   ***   //
-            $(function () {
-                $('#SelectBox-BySchool input:radio').change(function () {
+            $(function() {
+
+                $('#SelectBox-BySchool').change(function() {
+
                     let typeKey = $(this).val();
-                    let viewAll = "All";
+                    if (typeKey) {
 
-                    if (typeKey != viewAll) {
-                        $('.college').filter(function (i, e) {
+                        $('.college').filter(function(i, e) {
                             var typeValue = $(this).text();
-
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
                             } else {
                                 $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
                             }
-
                         });
+
                     } else {
+
                         $('.cejscourseWrapper').removeClass('hideBySchool');
                     }
 
@@ -104,17 +105,43 @@ $(function () {
             });
 
 
+            // $(function () {
+            //     $('#SelectBox-BySchool input:radio').change(function () {
+            //         let typeKey = $(this).val();
+            //         let viewAll = "All";
+
+            //         if (typeKey != viewAll) {
+            //             $('.college').filter(function (i, e) {
+            //                 var typeValue = $(this).text();
+
+            //                 if (typeValue.match(typeKey)) {
+            //                     $(this).parents('.cejscourseWrapper').removeClass('hideBySchool');
+            //                 } else {
+            //                     $(this).parents('.cejscourseWrapper').addClass('hideBySchool');
+            //                 }
+
+            //             });
+            //         } else {
+            //             $('.cejscourseWrapper').removeClass('hideBySchool');
+            //         }
+
+            //         parseItems.process();
+            //         countCourses();
+            //     });
+            // });
+
+
 
 
 
             //   ***   Course Level Filter   ***   //
-            $(function () {
-                $('#SelectBox-ByLevel input:radio').change(function () {
+            $(function() {
+                $('#SelectBox-ByLevel input:radio').change(function() {
                     let typeKey = $(this).val();
                     let viewAll = "All";
 
                     if (typeKey != viewAll) {
-                        $('.academicLevel').filter(function (i, e) {
+                        $('.academicLevel').filter(function(i, e) {
                             var typeValue = $(this).text();
 
                             if (typeValue.match(typeKey)) {
@@ -138,18 +165,18 @@ $(function () {
 
 
             //   ***  SDG Goals Multi-Select Checkbox Filter    ***   //
-            $(function () {
-                $('#SelectBox-ByGoal').change(function () {
-                    
+            $(function() {
+                $('#SelectBox-ByGoal').change(function() {
+
                     let elementKeys = [];
                     elementKeys[0] = 'Any';
 
-                    $('input[name=SelectBox-ByGoal]:checked').each(function (item) {
+                    $('input[name=SelectBox-ByGoal]:checked').each(function(item) {
                         elementKeys[item] = $(this).val();
                     });
 
                     if (elementKeys[0] != "Any") {
-                        $('ul.iconDashboard').filter(function (i, e) {
+                        $('ul.iconDashboard').filter(function(i, e) {
 
                             let elementValue = $(this).text() || null;
                             let sdgWheel = "UN Sustainable Development Goals";
@@ -178,16 +205,16 @@ $(function () {
 
 
             //   ***  LSAP Goals Multi-Select Checkbox Filter    ***   //
-            $(function () {
-                $('#SelectBox-ByLsap').change(function () {
+            $(function() {
+                $('#SelectBox-ByLsap').change(function() {
                     let elementKeys = [];
                     elementKeys[0] = 'Any';
-                    $('input[name=SelectBox-ByLsap]:checked').each(function (item) {
+                    $('input[name=SelectBox-ByLsap]:checked').each(function(item) {
                         elementKeys[item] = $(this).val();
                     });
 
                     if (elementKeys[0] != "Any") {
-                        $('ul.lsapIconDashboard').filter(function (i, e) {
+                        $('ul.lsapIconDashboard').filter(function(i, e) {
                             let elementValue = $(this).text() || null;
                             $(this).parents('.cejscourseWrapper').addClass('hideByLsap');
 
@@ -208,7 +235,7 @@ $(function () {
                     countCourses();
                 });
             });
-            
+
 
 
 
