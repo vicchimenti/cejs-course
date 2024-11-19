@@ -111,7 +111,7 @@ try {
    iconArray.push(3694401); //SDG 15 On Land
    iconArray.push(3694405); //SDG 16 Peace
    iconArray.push(3694409); //SDG 17 Partnerships
-   iconArray.push(4877455); //SDG All Wheel
+   iconArray.push(3780206); //SDG All Wheel
 
 
    /***
