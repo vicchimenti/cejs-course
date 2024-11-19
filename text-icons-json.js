@@ -10,7 +10,7 @@
  *
  *     Generates JSON containing details of Icons, this is used to feed the image and name into the icon search filters
  *
- *     @version 1.2
+ *     @version 1.3
  */
 
 
@@ -92,7 +92,7 @@ try {
    iconArray.push(4786688); //LSAP 5 Ecological Education
    iconArray.push(4786692); //LSAP 6 Ecological Spirituality
    iconArray.push(4786696); //LSAP 7 Community Resilience and Empowerment
-   iconArray.push(4877462); //LSAP All Wheel Goals
+   //onArray.push(4877462); //LSAP All Wheel Goals
 
    iconArray.push(3694343); //SDG 1 No Poverty
    iconArray.push(3694347); //SDG 2 Zero Hunger
@@ -110,8 +110,8 @@ try {
    iconArray.push(3694397); //SDG 14 Below Water
    iconArray.push(3694401); //SDG 15 On Land
    iconArray.push(3694405); //SDG 16 Peace
-   iconArray.push(3694409); //SDG 17 Partnerships
-   iconArray.push(3780206); //SDG All Wheel
+   iconArray.push(3694409); //SDG 17 PartnershipsSA
+   //iconArray.push(3780206); //SDG All Wheel
 
 
    /***
