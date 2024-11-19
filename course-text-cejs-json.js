@@ -141,6 +141,7 @@ try {
        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
        courseName: getContentValues('<t4 type="content" name="Course Name" output="normal" modifiers="striptags,htmlentities" />'),
+       environmentalIssues: getContentValues('<t4 type="content" name="Environmental Issues" output="normal" display_field="value" />'),
        cejsName: '',
           cejsType: 'course',
        school: getContentValues('<t4 type="content" name="Course College" output="normal" display_field="value" />'),
