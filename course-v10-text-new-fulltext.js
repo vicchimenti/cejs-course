@@ -304,7 +304,7 @@ try {
        let iconValues = assignSdgList(iconPathArray);
        listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
    } else {
-    listOfIcons = '<span hidden class="hidden lsap-icons"></span>';
+    listOfIcons = '<span hidden class="hidden sdg-icons"></span>';
    }
 
 
@@ -328,6 +328,8 @@ try {
 
        let iconValues = assignLsapList(iconPathArray);
        listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal">' + iconValues + '</ul>';
+   } else {
+    listOfLsapIcons = '<span hidden class="hidden lsap-icons"></span>';
    }
 
 
