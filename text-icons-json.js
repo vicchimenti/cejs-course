@@ -10,7 +10,7 @@
  *
  *     Generates JSON containing details of Icons, this is used to feed the image and name into the icon search filters
  *
- *     @version 1.1
+ *     @version 1.2
  */
 
 
