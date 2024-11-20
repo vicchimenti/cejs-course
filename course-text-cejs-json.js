@@ -9,7 +9,7 @@
  *
  *	   Used existing PL code as a starting point, adapted to file Terminalfour PHP Search Module
  *
- *     @version 1.0
+ *     @version 1.1
  */
 
 
