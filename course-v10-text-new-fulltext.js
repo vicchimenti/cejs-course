@@ -163,6 +163,7 @@ try {
        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
        articleTitle: getContentValues('<t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />'),
        courseName: getContentValues('<t4 type="content" name="Course Name" output="normal" modifiers="striptags,htmlentities" />'),
+       environmentalIssues: getContentValues('<t4 type="content" name="Environmental Issues" output="normal" display_field="value" />'),
        college: getContentValues('<t4 type="content" name="Course College" output="normal" display_field="value" />'),
        academicLevel: getContentValues('<t4 type="content" name="Section Academic Level" output="normal" modifiers="striptags,htmlentities" />'),
        subjectDescription: getContentValues('<t4 type="content" name="Subject" output="normal" modifiers="striptags,htmlentities" />'),
@@ -206,7 +207,7 @@ try {
      let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
      let listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal hidden visually-hidden">No valid icon provided</ul>';
      let listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-
+     let yes = "Yes";
 
 
 
@@ -285,6 +286,17 @@ try {
 
 
 
+    /***
+     * check for environmental issues
+     * 
+     * */
+    let environmentalIssuesString = (cejscDict.environmentalIssues.content === yes) ?
+        '<div class="global-spacing--3x"><div class="wysiwyg"><p><strong>Environmental Issues</strong></p></div></div>' :
+        '<span hidden class="hidden envIssues-no"></span>';
+
+
+                           
+
    /***
      *  Parse and format icons
      * 
@@ -359,6 +371,7 @@ try {
              breadcrumbString,
            closeHeaderWrapper,
            openBodyWrapper,
+             environmentalIssuesString,
              listOfLsapIcons,
            listOfIcons,
            descriptionString,
