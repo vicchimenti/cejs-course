@@ -7,7 +7,7 @@
  *
  *     Document will write client side once when the page loads
  *
- *     @version 1.2
+ *     @version 1.3
  */
 
 
@@ -207,7 +207,7 @@ try {
      let descriptionString = '<p class="card-text courseDescription visually-hidden hidden">No valid description provided</p>';
      let listOfIcons = '<ul class="iconDashboard list-group list-group-horizontal hidden visually-hidden">No valid icon provided</ul>';
      let listOfLsapIcons = '<ul class="lsapIconDashboard list-group list-group-horizontal hidden visually-hidden">No icons provided</ul>';
-     let yes = "Yes";
+     let yesTrue = "Yes";
 
 
 
@@ -290,7 +290,7 @@ try {
      * check for environmental issues
      * 
      * */
-    let environmentalIssuesString = (cejscDict.environmentalIssues.content == yes) ?
+    let environmentalIssuesString = (cejscDict.environmentalIssues.content == yesTrue) ?
         '<span hidden class="hidden envIssues-yes"></span>' :
         '<span hidden class="hidden envIssues-no"></span>';
 
