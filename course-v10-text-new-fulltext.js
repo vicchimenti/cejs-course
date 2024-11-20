@@ -290,8 +290,8 @@ try {
      * check for environmental issues
      * 
      * */
-    let environmentalIssuesString = (cejscDict.environmentalIssues.content === yes) ?
-        '<div class="global-spacing--3x"><div class="wysiwyg"><p><strong>Environmental Issues</strong></p></div></div>' :
+    let environmentalIssuesString = (cejscDict.environmentalIssues.content == yes) ?
+        '<span hidden class="hidden envIssues-yes"></span>' :
         '<span hidden class="hidden envIssues-no"></span>';
 
 
